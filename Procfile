@@ -1,1 +1,1 @@
-web: gunicorn grace-restaurant-p4-ci.wsgi
+web: gunicorn grace.wsgi
