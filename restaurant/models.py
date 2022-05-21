@@ -1,45 +1,50 @@
 from django.db import models
 from django.utils.text import slugify
+from multiselectfield import MultiSelectField
 
-
-class Allergen(models.Model):
-    DAIRY = 'Dairy'
-    EGGS = 'Eggs'
-    FISH = 'Fish'
-    SHELFISH = 'Shelfish'
-    NUTS = 'Nuts'
-    PEANUTS = 'Peanuts'
-    WHEAT = 'Wheat'
-    SOY = 'Soy'
-    ALLERGENS = [
-        (DAIRY, 'Dairy'),
-        (EGGS, 'Eggs'),
-        (FISH, 'Fish'),
-        (SHELFISH, 'Shelfish'),
-        (NUTS, 'Nuts'),
-        (PEANUTS, 'Peanuts'),
-        (WHEAT, 'Wheat'),
-        (SOY, 'Soy'),
-    ]
-    name = models.CharField(
-        ('Allergen name'),
-        max_length=20,
-        choices=ALLERGENS,
-        unique=True)
-
-    class Meta:
-        ordering = ['name']
-
-    def __str__(self):
-        return str(self.name)
+# https://docs.djangoproject.com/en/4.0/ref/models/fields/
+# https://pypi.org/project/django-multiselectfield/
 
 
 class Course(models.Model):
     name = models.CharField(max_length=50)
-    description = models.TextField(max_length=500)
-    price = models.IntegerField()
-    allergens = models.ManyToManyField(Allergen, blank=True)
     slug = models.SlugField(blank=True, null=True, unique=True)
+    description = models.TextField(max_length=250)
+    price = models.IntegerField()
+    ALLERGENS = [
+        (1, 'None'),
+        (2, 'Dairy'),
+        (3, 'Eggs'),
+        (4, 'Fish'),
+        (5, 'Shelfish'),
+        (6, 'Nuts'),
+        (7, 'Peanuts'),
+        (8, 'Wheat'),
+        (9, 'Soy'),
+    ]
+    allergens = MultiSelectField(choices=ALLERGENS, default="None")
+
+    STARTER = "Starter"
+    SOUP = "Soup"
+    SALADS = "Salads"
+    FISH_COURSE = "Fish"
+    MAIN_COURSE = "Main"
+    DESSERT = "Dessert"
+
+    COURSE_TYPE = [
+        (STARTER, "Starter"),
+        (SOUP, "Soup"),
+        (SALADS, "Salads"),
+        (FISH_COURSE, "Fish"),
+        (MAIN_COURSE, 'Main'),
+        (DESSERT, 'Dessert'),
+    ]
+    course_type = models.CharField(
+        ('Course type'),
+        max_length=25,
+        choices=COURSE_TYPE,
+        default="Starter"
+        )
 
     class Meta:
         ordering = ['name']
