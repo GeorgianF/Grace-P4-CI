@@ -2,8 +2,8 @@
 
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-container');
-const siteWrapper = document.querySelector('site-wrapper');
 const footer = document.querySelector('#footer')
+const landing = document.querySelector('#landing-page')
 let menuOpen = false;
 
 menuBtn.addEventListener('click', hideContentShowNav);
@@ -14,11 +14,14 @@ function hideContentShowNav() {
     menuOpen = true;
     navBar.style.display = 'block';
     footer.classList.add('d-none');
+    landing.classList.add('d-none');
   } else {
     menuBtn.classList.remove('open');
     menuOpen = false;
     navBar.style.display = 'none';
     footer.classList.remove('d-none');
+    landing.classList.remove('d-none');
   }
 }
 
+module.exports = hideContentShowNav
