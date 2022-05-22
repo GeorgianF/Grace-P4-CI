@@ -5,25 +5,27 @@
     padding: 0;
 }
 
+/* BASE.HTML */
+
 /* ---- NAV BAR ---- */
 
 .menu-btn {
-    position: absolute;
+    position: fixed;
     top: 3%;
     right: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     transition: all .5s ease-in-out;
     border: 3px solid black;
     z-index: 2;
 }
 
 .menu-btn__burger {
-    width: 30px;
-    height: 5px;
+    width: 20px;
+    height: 3px;
     background: black;
     border-radius: 5px;
     transition: all .5s ease-in-out;
@@ -33,19 +35,19 @@
 .menu-btn__burger::after {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 5px;
+    width: 20px;
+    height: 3px;
     background: black;
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
 
 .menu-btn__burger::before {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
 
 .menu-btn__burger::after {
-    transform: translateY(10px);
+    transform: translateY(8px);
 }
 
 /* ---- NAVBAR ANIMATION ----- */
@@ -100,3 +102,15 @@
     color: gray;
 }
 
+/* ---- FOOTER ---- */
+footer {
+    font-size: 12px;
+}
+
+footer i {
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
