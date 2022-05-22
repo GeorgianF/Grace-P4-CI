@@ -7,6 +7,15 @@
 
 /* BASE.HTML */
 
+.site-wrapper {
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+}
+
 /* ---- NAV BAR ---- */
 
 .menu-btn {
@@ -19,8 +28,7 @@
     width: 35px;
     height: 35px;
     transition: all .5s ease-in-out;
-    border: 3px solid black;
-    z-index: 2;
+    z-index: 1;
 }
 
 .menu-btn__burger {
@@ -67,14 +75,17 @@
 
 /* ---- FULL SCREEN NAV BAR */
 
+
 .nav-container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
+    display: none;
+    opacity: 0.8;
+    padding-top: 100px;
+    
 }
 
 #nav-bar ul {
@@ -108,9 +119,5 @@ footer {
 }
 
 footer i {
-    font-size: 20px;
-}
-
-footer a {
-    text-decoration: none;
+    font-size: 16px;
 }
