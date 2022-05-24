@@ -9,3 +9,7 @@ class CourseListViews(ListView):
     model = Course
     queryset = Course.objects.order_by('course_type')
     template_name = 'index.html'
+
+
+def restaurant_view(request):
+    return render(request, "our-restaurant.html")
