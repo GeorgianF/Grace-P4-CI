@@ -24,9 +24,4 @@ function hideContentShowNav() {
   }
 }
 
-$(landing).fadeIn(0.2)
-
-
-
-
 module.exports = hideContentShowNav

@@ -1,7 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-    <h1>our Restaurant page</h1>
-
+<div class="our-restaurant-content">
+    <img id="hero-image" src="https://res.cloudinary.com/dlyr5slol/image/upload/v1653417135/banner_cs54ot.jpg"
+        alt="banner-image">
+    <div class="card text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="card-body">
+                    <h5 class="card-title">GRACE</h5>
+                    <p class="card-text">The restaurant is a fine dining restaurant located in the heart of Chicago. The
+                        restaurant
+                        overlooks Cloud Gate, one of the most beautiful landmarks in Chicago. Located here since
+                        1998, it underwent a full-scale renovation and redesign in the summer of 2017.</p>
+                    <p class="card-text">
+                        The restaurant has been owned by Chef Curtis Duffy since 2011 and during that time it has evolved
+                        considerably, both in food and in experience. Our tasting menu consists of entirely plant-based
+                        courses. Guests can also visit the bar for a more abbreviated version of the tasting menu, light
+                        snacks, or simply for a cocktail or glass of wine.
+                    </p>
+                    <a href="#" class="btn btn-index">Book a Table</a>
+                </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="left-side">
+                    <i class="fa fa-medkit" aria-hidden="true"></i>
+                    <p>We follow the RIVM guidelines to prevent the spread of COVID-19</p>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <p>Strange times, but be kind with one another</p>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <p>Have sympthoms? You can always cancel the reservation</p>
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <p>I know, it's hard to keep a distance. We are in it togheter</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {%endblock%}

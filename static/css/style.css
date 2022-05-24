@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Zen Loop', cursive, sans-serif;
 }
 
 /* BASE.HTML */
@@ -175,3 +176,30 @@ a.btn-index:hover::before{
     text-transform: uppercase;
 }
 
+/* ----- OUR RESTAURANT ----- */
+
+.our-restaurant-content {
+    height: 100vh;
+}
+
+#hero-image {
+    height: 50vh;
+    width: 100vw;
+}
+
+.card {
+    width: 100%;
+    border-radius: 0;
+}
+
+.card .card-text {
+    font-size: 16px;
+}
+
+
+#left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
