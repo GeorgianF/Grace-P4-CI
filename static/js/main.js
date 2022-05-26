@@ -1,5 +1,4 @@
 // NAV BAR Animation JS
-
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-container');
 const footer = document.querySelector('#footer')
@@ -15,6 +14,7 @@ function hideContentShowNav() {
     navBar.style.display = 'block';
     footer.classList.add('d-none');
     landing.classList.add('d-none');
+
   } else {
     menuBtn.classList.remove('open');
     menuOpen = false;
@@ -23,5 +23,3 @@ function hideContentShowNav() {
     landing.classList.remove('d-none');
   }
 }
-
-module.exports = hideContentShowNav

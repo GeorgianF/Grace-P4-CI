@@ -13,3 +13,8 @@ class CourseListViews(ListView):
 
 def restaurant_view(request):
     return render(request, "our-restaurant.html")
+
+
+def booking_view(request):
+    return render(request, "booking.html")
+
