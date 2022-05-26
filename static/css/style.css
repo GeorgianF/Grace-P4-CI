@@ -6,17 +6,6 @@
     font-family: 'Zen Loop', cursive, sans-serif;
 }
 
-/* BASE.HTML */
-
-.site-wrapper {
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: -1;
-}
-
 /* ---- NAV BAR ---- */
 
 .menu-btn {
@@ -29,7 +18,7 @@
     width: 35px;
     height: 35px;
     transition: all .5s ease-in-out;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-btn__burger {
@@ -74,19 +63,21 @@
     transform: rotate(-45deg) translate(35px, 35px);
 }
 
-/* ---- FULL SCREEN NAV BAR */
-
-
 .nav-container {
+    width: 350px;
     height: 100vh;
+    position: fixed;
+    right: -350px;
+    top: 0;
+    background: #827770;
+    z-index: 1;
+    transition: .5s;
+    opacity: 0.9;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: black;
-    display: none;
-    opacity: 0.7;
-    padding-top: 100px;
-    
+    align-items: flex-start;
+    font-size: 14px;
+    padding-top: 100px;    
 }
 
 #nav-bar ul {
@@ -95,23 +86,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#nav-bar ul li {
-    margin: 10px;
+    align-items: flex-end;
 }
 
 #nav-bar ul li a {
-    color: white;
+    color: #fff;
     font-family: 'Zen Loop', cursive, sans-serif;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 20px;
     letter-spacing: .2rem;
     text-decoration: none;
+    margin: 10px;
+    padding-top: 20px;
 }
 
 #nav-bar ul li .disabled {
-    color: gray;
+    color: rgba(181, 177, 177, 0.848);
 }
 
 /* ---- FOOTER ---- */
