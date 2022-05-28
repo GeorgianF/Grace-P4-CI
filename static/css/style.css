@@ -355,6 +355,27 @@ a.btn-index:hover::before{
     grid-row: span 2;
 }
 
+
+/* ----- TEAM PAGE ----- */
+
+.team-heading {
+    margin: 50px 0;
+}
+
+.img-thumbnail {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.horizontal-line {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    
+}
+
+
 /* ---- Media Queries ----- */
 
 @media only screen and (max-width: 768px) {
