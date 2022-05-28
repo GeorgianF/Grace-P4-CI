@@ -18,3 +18,26 @@ def restaurant_view(request):
 def booking_view(request):
     return render(request, "booking.html")
 
+
+def menu_view(request):
+    return render(request, "menu.html")
+
+
+def team_view(request):
+    return render(request, "team.html")
+
+
+def gallery_view(request):
+    return render(request, "gallery.html")
+
+
+def faq_view(request):
+    return render(request, "faq.html")
+
+
+def events_view(request):
+    return render(request, "events.html")
+
+
+def member_view(request):
+    return render(request, "member.html")
