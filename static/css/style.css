@@ -347,36 +347,12 @@ a.btn-index:hover::before{
     grid-column: span 2;
 }
 
-.column-width-3 {
-    grid-column: span 3;
-}
-
-.column-width-4 {
-    grid-column: span 4;
-}
-
-.column-width-5 {
-    grid-column: span 5;
-}
-
 .column-height-1 {
     grid-row: span 1;
 }
 
 .column-height-2 {
     grid-row: span 2;
-}
-
-.column-height-3 {
-    grid-row: span 3;
-}
-
-.column-height-4 {
-    grid-row: span 4;
-}
-
-.column-height-5 {
-    grid-row: span 5;
 }
 
 /* ---- Media Queries ----- */
