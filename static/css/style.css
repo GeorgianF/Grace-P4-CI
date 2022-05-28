@@ -100,6 +100,11 @@
     padding-top: 20px;
 }
 
+#nav-bar ul li a:focus,
+#nav-bar ul li a:hover {
+    color: black;
+}
+
 #nav-bar ul li .disabled {
     color: rgba(181, 177, 177, 0.848);
 }
