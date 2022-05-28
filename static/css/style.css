@@ -269,3 +269,144 @@ a.btn-index:hover::before{
     margin-bottom: -30px;
     margin-top: -30px;
 }
+
+
+/* ----- GALLERY PAGE ----- */
+
+.gallery-heading {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-container {
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-container .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: .5s ease;
+
+}
+
+.image-container .image img:hover {
+    transform: scale(1.2);
+}
+
+.image-container .image-text {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    z-index: 1;
+    transition: all 0.3 ease-in;
+    -webkit-backdrop-filter: blur(5px) hue-rotate(120deg);
+    backdrop-filter: blur(5px) hue-rotate(120deg);
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+    animation: from-left .3s linear;
+}
+
+.column-width-1 {
+    grid-column: span 1;
+}
+
+.column-width-2 {
+    grid-column: span 2;
+}
+
+.column-width-3 {
+    grid-column: span 3;
+}
+
+.column-width-4 {
+    grid-column: span 4;
+}
+
+.column-width-5 {
+    grid-column: span 5;
+}
+
+.column-height-1 {
+    grid-row: span 1;
+}
+
+.column-height-2 {
+    grid-row: span 2;
+}
+
+.column-height-3 {
+    grid-row: span 3;
+}
+
+.column-height-4 {
+    grid-row: span 4;
+}
+
+.column-height-5 {
+    grid-row: span 5;
+}
+
+/* ---- Media Queries ----- */
+
+@media only screen and (max-width: 768px) {
+    .gallery-container {
+        margin: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+    .gallery-container {
+        margin: 2px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+        grid-gap: 1px;
+    }
+
+}
+
+
+@keyframes from-left {
+    0% {
+        top: 100%;
+    }
+
+    50% {
+        top: 75%;
+    }
+
+    100% {
+        top: 50%;
+    }
+    
+}
