@@ -19,8 +19,10 @@ def booking_view(request):
     return render(request, "booking.html")
 
 
-def menu_view(request):
-    return render(request, "menu.html")
+def menu_list(request):
+    course_list = Course.objects.all()
+    context = {'course_list': course_list}
+    return render(request, "menu.html", context)
 
 
 def team_view(request):

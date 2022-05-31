@@ -2,5 +2,18 @@
 
 {% block content %}
 
-<h1>menu page</h1>
+<section id="menu">
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <img id="menu-logo" src="https://res.cloudinary.com/dlyr5slol/image/upload/v1653249632/thumbnail_ebtlpf.jpg" alt="grace-logo">
+        <h1>Menu</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+        {% for course in course_list %}
+            <h2> {{ course }}</h2>
+        {% endfor %}
+        </div>
+    </div>
+</section>
 {%endblock%}
