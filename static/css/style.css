@@ -111,7 +111,7 @@
 
 /* ---- FOOTER ---- */
 footer {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 footer i {
@@ -378,9 +378,6 @@ a.btn-index:hover::before{
     margin: 50px 0;
 }
 
-.accordion-header {
-    font-size: 36px;
-}
 
 /* ---- Media Queries ----- */
 
