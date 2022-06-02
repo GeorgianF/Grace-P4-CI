@@ -20,8 +20,20 @@ def booking_view(request):
 
 
 def menu_list(request):
-    course_list = Course.objects.all()
-    context = {'course_list': course_list}
+    starter_list = Course.objects.all().filter(course_type='Starter')
+    main_list = Course.objects.all().filter(course_type='Main')
+    fish_list = Course.objects.all().filter(course_type='Fish')
+    dessert_list = Course.objects.all().filter(course_type='Dessert')
+    salads_list = Course.objects.all().filter(course_type='Salads')
+    soup_list = Course.objects.all().filter(course_type='Soup')
+    context = {
+        'starter_list': starter_list,
+        'main_list': main_list,
+        'fish_list': fish_list,
+        'dessert_list': dessert_list,
+        'salads_list': salads_list,
+        'soup_list': soup_list,
+        }
     return render(request, "menu.html", context)
 
 

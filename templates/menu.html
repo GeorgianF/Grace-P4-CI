@@ -2,18 +2,74 @@
 
 {% block content %}
 
-<section id="menu">
+<section>
     <div class="d-flex justify-content-center align-items-center flex-column">
-        <img id="menu-logo" src="https://res.cloudinary.com/dlyr5slol/image/upload/v1653249632/thumbnail_ebtlpf.jpg" alt="grace-logo">
-        <h1>Menu</h1>
-    </div>
-
-    <div class="container">
-        <div class="row">
-        {% for course in course_list %}
-            <h2> {{ course }}</h2>
-        {% endfor %}
-        </div>
+        <h1 id="menu">Menu</h1>
     </div>
 </section>
+<section id="my-carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container d-block w-100 d-flex flex-column justify-content-center">
+                    <div class="d-flex flex-row-reverse justify-content-center">
+                        <div class="row">
+                            <div
+                                class="col-4 col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
+                                <h1>STARTERS</h1>
+                            </div>
+                        </div>
+                        <div class="row content-menu">
+                            {% for course in starter_list %}
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-8">
+                                <h2> {{ course.name }}</h2>
+                                <p> {{ course.description }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {%endblock%}
