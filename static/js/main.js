@@ -2,6 +2,7 @@
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-container');
 const cards = document.querySelectorAll('.card-body');
+const card = document.querySelector('.flipped')
 let menuOpen = false;
 
 menuBtn.addEventListener('click', hideContentShowNav);
@@ -22,7 +23,11 @@ function hideContentShowNav() {
 cards.forEach(card => {card.addEventListener("click", 
   function () 
   {
-    card.classList.toggle('flipped')
+    card.classList.add('flipped');
+    setTimeout(() => {
+      card.classList.remove('flipped');
+    }, 5000);
   })
 })
+
 
