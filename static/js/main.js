@@ -26,7 +26,7 @@ cards.forEach(card => {card.addEventListener("click",
     card.classList.add('flipped');
     setTimeout(() => {
       card.classList.remove('flipped');
-    }, 5000);
+    }, 10000);
   })
 })
 
