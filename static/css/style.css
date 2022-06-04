@@ -136,7 +136,7 @@ a.btn-index {
     font-size: 30px;
     font-weight: bolder;
     border: 1px solid white;
-    padding: 10px 30px;
+    padding: 2px 20px;
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
@@ -197,6 +197,10 @@ a.btn-index:hover::before{
     margin: 0 auto;
     position: absolute;
     top: -90px;
+}
+
+.card-body-restaurant {
+    margin-bottom: 10px;
 }
 
 .card .card-text {
