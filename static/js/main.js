@@ -1,6 +1,7 @@
 // NAV BAR Animation JS
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-container');
+const cards = document.querySelectorAll('.card-body');
 let menuOpen = false;
 
 menuBtn.addEventListener('click', hideContentShowNav);
@@ -17,3 +18,11 @@ function hideContentShowNav() {
     navBar.style.right = '-350px'
   }
 }
+
+cards.forEach(card => {card.addEventListener("click", 
+  function () 
+  {
+    card.classList.toggle('flipped')
+  })
+})
+
