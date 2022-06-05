@@ -178,7 +178,7 @@ a.btn-index:hover::before{
 }
 
 #hero-image {
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
     align-items: center;
     border-bottom: 1px solid black;
@@ -193,8 +193,8 @@ a.btn-index:hover::before{
     border-radius: 25px;
     margin: 0 auto;
     position: absolute;
-    top: -360px;
-    opacity: 0.9;
+    top: -25px;
+    margin-bottom: 50px;
 }
 
 .card-body-restaurant {
@@ -206,19 +206,36 @@ a.btn-index:hover::before{
     font-weight: bold;
 }
 
+#health-guidelines {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
 
-#left-side {
+.features-container {
+    width: 80%;
+    flex-basis: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-1-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
 }
 
-#testimonials
-{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 200px;
+
+.fa {
+    font-size: 36px;
+}
+
+#testimonials {
+    height: 100%;
     margin-top: -50px;
 }
 
@@ -243,7 +260,7 @@ a.btn-index:hover::before{
 .review
 {
     font-size: 16px;
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
 }
@@ -493,7 +510,7 @@ a.btn-index:hover::before{
 
 @media only screen and (max-width: 576px) {
     .restaurant-card {
-        top: -360px;
+        top: -60px;
         width: 90%;
     }
 }
