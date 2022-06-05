@@ -476,7 +476,7 @@ a.btn-index:hover::before{
 }
 
 .card-row {
-    margin-bottom: 50px ;
+    margin-bottom: 20px;
 }
 
 /* ---- Media Queries ----- */
