@@ -384,10 +384,6 @@ a.btn-index:hover::before{
 
 /* ----- MENU PAGE ----- */
 
-#menu {
-    padding: 100px 0;
-}
-
 .card {
     margin: 0 auto ;
     transition: all 1s;
@@ -470,6 +466,12 @@ a.btn-index:hover::before{
 
 /* ---- Media Queries ----- */
 
+@media only screen and (max-width: 992px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .gallery-container {
         margin: 10px;
@@ -483,6 +485,10 @@ a.btn-index:hover::before{
 
     .content-menu {
         margin-right: 50px;
+    }
+
+    .card {
+        margin-bottom: 10px;
     }
 }
 
