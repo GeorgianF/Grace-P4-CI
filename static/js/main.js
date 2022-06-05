@@ -1,7 +1,7 @@
 // NAV BAR Animation JS
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-container');
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card-menu');
 let menuOpen = false;
 
 // Function for the menu button animation
