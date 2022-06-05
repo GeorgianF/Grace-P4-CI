@@ -2,48 +2,47 @@
 
 {% block content %}
 
+<!-- RESTAURANT INFO -->
 
-<div id="our-restaurant-content">
     <section id="hero-corona">
-        <img id="hero-image" src="https://res.cloudinary.com/dlyr5slol/image/upload/v1653417135/banner_cs54ot.jpg"
-            alt="banner-image">
-        <div class="card text-center d-flex justify-content-center">
-            <div class="container">
-                <div class="row justify-content">
-                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div class="card-body-restaurant">
-                            <h3 class="card-title-restaurant mt-2">GRACE</h3>
-                            <p class="card-text">The restaurant is a fine dining restaurant located in the heart of
-                                Chicago. The
-                                restaurant
-                                overlooks Cloud Gate, one of the most beautiful landmarks in Chicago. Located here since
-                                1998, it underwent a full-scale renovation and redesign in the summer of 2017.</p>
-                            <p class="card-text">
-                                The restaurant has been owned by Chef Curtis Duffy since 2011 and during that time it
-                                has evolved
-                                considerably, both in food and in experience. Our tasting menu consists of entirely
-                                plant-based
-                                courses. Guests can also visit the bar for a more abbreviated version of the tasting
-                                menu, light
-                                snacks, or simply for a cocktail or glass of wine.
-                            </p>
-                            <a href="#" class="btn btn-index">Book a Table</a>
+        <div id="our-restaurant-content">
+            <img id="hero-image" src="https://res.cloudinary.com/dlyr5slol/image/upload/v1653417135/banner_cs54ot.jpg"
+                alt="banner-image">
+            <div class="card restaurant-card text-center d-flex justify-content-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card-body-restaurant">
+                                <h3 class="card-title-restaurant mt-2">GRACE</h3>
+                                <p class="card-text">The restaurant is a fine dining restaurant located in the heart of
+                                    Chicago. The
+                                    restaurant
+                                    overlooks Cloud Gate, one of the most beautiful landmarks in Chicago. Located here
+                                    since
+                                    1998, it underwent a full-scale renovation and redesign in the summer of 2017.</p>
+                                <p class="card-text">
+                                    The restaurant has been owned by Chef Curtis Duffy since 2011 and during that time
+                                    it
+                                    has evolved
+                                    considerably, both in food and in experience. Our tasting menu consists of entirely
+                                    plant-based
+                                    courses. Guests can also visit the bar for a more abbreviated version of the tasting
+                                    menu, light
+                                    snacks, or simply for a cocktail or glass of wine.
+                                </p>
+                                <a href="#" class="btn btn-index">Book a Table</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="left-side">
-                        <i class="fa fa-medkit" aria-hidden="true"></i>
-                        <p>We follow the RIVM guidelines to prevent the spread of COVID-19</p>
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        <p>Strange times, but be kind with one another</p>
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                        <p>Have sympthoms? You can always cancel the reservation</p>
-                        <i class="fa fa-users" aria-hidden="true"></i>
-                        <p>I know, it's hard to keep a distance. We are in it togheter</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row text-center d-flex justify-content-center" id="testimonials">
+    </section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+    <div class="container">
+        <div class="row mb-5 text-center d-flex justify-content-center">
             <div class="col-md-3">
                 <p class="review">This lovely place offers food and wine at the very highest levels and the service
                     is excellent, very friendly, attentive but not too much so, very professional. Nice selection of
@@ -74,6 +73,21 @@
                 <img src="https://res.cloudinary.com/dlyr5slol/image/upload/v1653567667/user3_fxo686.jpg" alt="user3">
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
+
+<section id="corona-guidelines">
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="left-side">
+        <i class="fa fa-medkit" aria-hidden="true"></i>
+        <p>We follow the RIVM guidelines to prevent the spread of COVID-19</p>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <p>Strange times, but be kind with one another</p>
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <p>Have sympthoms? You can always cancel the reservation</p>
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <p>I know, it's hard to keep a distance. We are in it togheter</p>
+    </div>
+
+</section>
+
 {%endblock%}

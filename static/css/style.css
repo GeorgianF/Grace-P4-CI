@@ -177,34 +177,32 @@ a.btn-index:hover::before{
     height: 100vh;
 }
 
-.our-restaurant-content {
-    height: 100vh;
-}
-
 #hero-image {
-    height: 50vh;
+    height: 100vh;
     width: 100vw;
     align-items: center;
     border-bottom: 1px solid black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     position: relative;
+    object-fit: cover;
 }
 
-.card {
+.restaurant-card {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 80%;
-    border-radius: 0;
+    width: 70%;
+    border-radius: 25px;
     margin: 0 auto;
     position: absolute;
-    top: -90px;
+    top: -360px;
+    opacity: 0.9;
 }
 
 .card-body-restaurant {
     margin-bottom: 10px;
 }
 
-.card .card-text {
-    font-size: 16px;
+.restaurant-card .card-text {
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -384,7 +382,7 @@ a.btn-index:hover::before{
 
 /* ----- MENU PAGE ----- */
 
-.card {
+.card-menu {
     margin: 0 auto ;
     transition: all 1s;
     transform-style: preserve-3d;
@@ -470,6 +468,7 @@ a.btn-index:hover::before{
     .card {
         margin-bottom: 20px;
     }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -492,6 +491,13 @@ a.btn-index:hover::before{
     }
 }
 
+@media only screen and (max-width: 576px) {
+    .restaurant-card {
+        top: -360px;
+        width: 90%;
+    }
+}
+
 @media only screen and (max-width: 425px) {
     .gallery-container {
         margin: 2px;
@@ -502,6 +508,16 @@ a.btn-index:hover::before{
     
     .content-menu {
         margin-right: 50px!important;
+    }
+
+    #hero-image {
+        height: 50vh;
+    }
+
+    .restaurant-card {
+        top: -60px;
+        width: 90%;
+        opacity: 1;
     }
 
 }
