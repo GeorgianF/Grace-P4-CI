@@ -1,9 +1,10 @@
 // NAV BAR Animation JS
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-container');
-const cards = document.querySelectorAll('.card-body');
-const card = document.querySelector('.flipped')
+const cards = document.querySelectorAll('.card');
 let menuOpen = false;
+
+// Function for the menu button animation
 
 menuBtn.addEventListener('click', hideContentShowNav);
 
@@ -18,7 +19,9 @@ function hideContentShowNav() {
     menuOpen = false;
     navBar.style.right = '-350px'
   }
-}
+};
+
+// Function for the card flip animation for the menu.html
 
 cards.forEach(card => {card.addEventListener("click", 
   function () 
@@ -27,7 +30,7 @@ cards.forEach(card => {card.addEventListener("click",
     setTimeout(() => {
       card.classList.remove('flipped');
     }, 10000);
-  })
-})
+  });
+});
 
 
