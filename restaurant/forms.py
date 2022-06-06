@@ -26,13 +26,13 @@ class EventBooking(ModelForm):
                 }
             )
         )
-    phone_no = forms.IntegerField(
+    phone_no = forms.CharField(
+        min_length=10,
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control',
                 }
-            ),
-        min_value=10,
+            )
         )
     event_date = forms.DateField(
         input_formats=['%d/%m/%Y %H:%M'],

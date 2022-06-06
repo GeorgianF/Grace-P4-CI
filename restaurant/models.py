@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from multiselectfield import MultiSelectField
+from phonenumber_field.modelfields import PhoneNumberField
 
 # https://docs.djangoproject.com/en/4.0/ref/models/fields/
 # https://pypi.org/project/django-multiselectfield/
@@ -64,7 +65,7 @@ class EventForm(models.Model):
     user_email = models.EmailField(max_length=50)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    phone_no = models.CharField(max_length=15)
+    phone_no = PhoneNumberField(max_length=15)
     event_date = models.DateField()
     event_details = models.CharField(max_length=500)
 
