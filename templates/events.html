@@ -2,5 +2,26 @@
 
 {% block content %}
 
-<h1>events page</h1>
+<section id="events-header">
+    <h1>Events and Bankqueting</h1>
+</section>
+
+<section id="events-form">
+    <div class="container">
+        <form action="/events/" method="POST">
+            <legend>CONTACT US:</legend>
+            {%csrf_token%}
+            {{ form.as_p }}
+            <input class="mt-2 mb-3" type="submit" value="submit">
+        </form>
+    </div>
+</section>
+
+<script>
+    $(function () {
+      $("#datetimepicker").datetimepicker();
+    });
+</script>
+
+
 {%endblock%}

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from .models import Course
+from .forms import EventBooking
 
 
 # Create your views here.
@@ -50,7 +51,18 @@ def faq_view(request):
 
 
 def events_view(request):
-    return render(request, "events.html")
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = EventBooking(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            form.save()
+    else:
+        form = EventBooking()
+
+    context = {'form': form}
+    return render(request, "events.html", context)
 
 
 def member_view(request):

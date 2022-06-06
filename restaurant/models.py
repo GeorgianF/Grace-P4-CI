@@ -58,3 +58,18 @@ class Course(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+class EventForm(models.Model):
+    user_email = models.EmailField(max_length=50)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    phone_no = models.CharField(max_length=15)
+    event_date = models.DateField()
+    event_details = models.CharField(max_length=500)
+
+    class Meta:
+        ordering = ['event_date']
+
+    def __str__(self):
+        return str(self.first_name + " " + self.last_name)

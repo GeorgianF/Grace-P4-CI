@@ -242,8 +242,6 @@ a.btn-index:hover::before{
 #testimonials .col-md-4
 {
     padding: 10px 50px;
-
-
 }
 
 #testimonials img
@@ -348,7 +346,7 @@ a.btn-index:hover::before{
     transform: translateX(-50%) translateY(-50%);
     color: #fff;
     z-index: 1;
-    transition: all 0.3 ease-in;
+    transition: all 0.3s ease-in;
     -webkit-backdrop-filter: blur(5px) hue-rotate(120deg);
     backdrop-filter: blur(5px) hue-rotate(120deg);
 }
@@ -487,13 +485,29 @@ a.btn-index:hover::before{
     outline: none;
 }
 
+
+/* ----- EVENT PAGE ----- */
+
+#events-header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#events-form {
+    max-width: 30vw;
+    margin: 0 auto;
+}
+
+
+
 /* ---- Media Queries ----- */
 
 @media only screen and (max-width: 992px) {
     .card {
         margin-bottom: 20px;
     }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -514,6 +528,8 @@ a.btn-index:hover::before{
     .card {
         margin-bottom: 10px;
     }
+
+    
 }
 
 @media only screen and (max-width: 576px) {
