@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from .models import Course
 from .forms import EventBooking
+from django.contrib import messages
 
 
 # Create your views here.
@@ -58,9 +59,10 @@ def events_view(request):
         # check whether it's valid:
         if form.is_valid():
             form.save()
+            form = EventBooking()
+            messages.success(request, 'The request has been received, we will contact you shortly')
     else:
         form = EventBooking()
-
     context = {'form': form}
     return render(request, "events.html", context)
 

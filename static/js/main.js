@@ -34,3 +34,22 @@ cards.forEach(card => {card.addEventListener("click",
 });
 
 
+// DATE PICKER EVENTS
+
+// https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html
+
+$(function () {
+  $("#datetimepicker").datetimepicker({
+    format: 'd/m/Y H:i',
+  });
+});
+
+// MESSAGES
+
+// https://github.com/studygyaan/Django-CRM-Project
+
+setTimeout(function(){
+  if ($('#msg').length > 0) {
+    $('#msg').remove();
+  }
+}, 2000)

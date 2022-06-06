@@ -1,7 +1,6 @@
 from django.forms import ModelForm
 from django import forms
 from .models import EventForm
-import datetime
 
 
 class EventBooking(ModelForm):
@@ -32,16 +31,15 @@ class EventBooking(ModelForm):
             attrs={
                 'class': 'form-control',
                 }
-            ))
+            ),
+        min_value=10,
+        )
     event_date = forms.DateField(
-        initial=datetime.date.today,
-        help_text="Date format yyyy-mm-dd",
+        input_formats=['%d/%m/%Y %H:%M'],
         widget=forms.DateTimeInput(attrs={
             'class': 'form-control',
             'id': 'datetimepicker'
-        }),
-        input_formats=['%d/%m/%Y %H:%M']
-        )
+        }))
     event_details = forms.CharField(widget=forms.Textarea(
             attrs={
                 'class': 'form-control',
