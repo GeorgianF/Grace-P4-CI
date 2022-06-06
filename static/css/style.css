@@ -508,6 +508,10 @@ a.btn-index:hover::before{
     .card {
         margin-bottom: 20px;
     }
+
+    #events-form {
+        max-width: 50vw;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -529,13 +533,19 @@ a.btn-index:hover::before{
         margin-bottom: 10px;
     }
 
-    
+    #events-form {
+        max-width: 50vw;
+    }
 }
 
 @media only screen and (max-width: 576px) {
     .restaurant-card {
         top: -60px;
         width: 90%;
+    }
+
+    #events-form {
+        max-width: 70vw;
     }
 }
 
@@ -561,6 +571,9 @@ a.btn-index:hover::before{
         opacity: 1;
     }
 
+    #events-form {
+        max-width: 70vw;
+    }
 }
 
 /* ----- KeyFrames for grid  gallery ----- */
