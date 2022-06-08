@@ -516,12 +516,6 @@ a.btn-index:hover::before{
     outline: none;
 }
 
-.btn-dark:focus,
-.btn-dark:active,
-.btn-dark:hover {
-    outline: none;
-}
-
 /* ---- Media Queries ----- */
 
 @media only screen and (max-width: 992px) {
