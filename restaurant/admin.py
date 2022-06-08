@@ -9,7 +9,7 @@ class CourseAdmin(admin.ModelAdmin):
 
 
 class EventFormAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'event_date')
+    list_display = ('first_name', 'last_name', 'phone_no', 'event_date')
 
 
 courses = admin.site.register(Course, CourseAdmin)

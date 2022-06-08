@@ -39,6 +39,9 @@ cards.forEach(card => {card.addEventListener("click",
 // https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html
 
 $(function () {
+  var today = new Date();
+  var tomorrow = new Date();
+  tomorrow.setDate(today.getDate() + 1);
   $("#datetimepicker").datetimepicker({
     format: 'd/m/Y H:i',
     allowTimes:[
@@ -54,6 +57,7 @@ $(function () {
     ],
     theme:'dark',
     disabledDates: [
+      new Date(),
       '12.06.2022','19.06.2022','26.06.2022',
       '03.07.2022','10.07.2022','17.07.2022',
       '24.07.2022','31.07.2022','07.08.2022',
@@ -65,7 +69,7 @@ $(function () {
       '27.11.2022','04.12.2022','11.12.2022',
       '18.12.2022','25.12.2022'],
 	  formatDate:'d.m.Y',
-    minDate:0,
+    minDate: tomorrow,
   });
 });
 
