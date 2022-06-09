@@ -3,7 +3,8 @@ from django.views.generic import ListView
 from django.contrib import messages
 from .models import Course
 from .forms import EventBooking
-
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Create your views here.
@@ -66,6 +67,16 @@ def events_view(request):
                 'Your request has been sent succesfully.' +
                 ' We will contact you shortly'
                 )
+            # subject = request.POST.get('first_name')
+            # message = request.POST.get('last_name')
+            # email = request.POST.get('email')
+            # send_mail(
+            #     subject,
+            #     message,
+            #     settings.EMAIL_HOST_USER,
+            #     [email],
+            #     fail_silently=False,
+            #     )
     else:
         form = EventBooking()
     context = {'form': form}
