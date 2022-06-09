@@ -37,7 +37,11 @@
                 <li><a href="{% url 'team' %}">TEAM</a></li>
                 <li><a href="{% url 'faq' %}">FAQ</a></li>
                 <li><a href="{% url 'events' %}">EVENTS</a></li>
-                <li><a href="{% url 'member' %}">MEMBER REGISTER</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}">LOGOUT</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_login' %}">LOGIN / SIGN-UP</a></li>
+                {% endif %}
             </ul>
         </nav>
     </div>

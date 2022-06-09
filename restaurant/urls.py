@@ -10,5 +10,4 @@ urlpatterns = [
     path('gallery/', views.gallery_view, name='gallery'),
     path('faq/', views.faq_view, name='faq'),
     path('events/', views.events_view, name='events'),
-    path('member/', views.member_view, name='member'),
 ]

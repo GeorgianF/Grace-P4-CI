@@ -71,6 +71,3 @@ def events_view(request):
     context = {'form': form}
     return render(request, "events.html", context)
 
-
-def member_view(request):
-    return render(request, "member.html")
