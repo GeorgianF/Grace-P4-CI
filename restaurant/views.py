@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.contrib import messages
+from django.conf import settings
+from django.core.mail import send_mail
 from .models import Course
 from .forms import EventBooking
-from django.core.mail import send_mail
-from django.conf import settings
 
 
 # Create your views here.
@@ -60,25 +60,22 @@ def events_view(request):
         form = EventBooking(request.POST)
         # check whether it's valid:
         if form.is_valid():
-            form.save()
-            form = EventBooking()
+            # receiver = request.POST.get('user_email')
+            # send_mail(
+            #     'Hello',
+            #     'Here is the message.',
+            #     settings.EMAIL_HOST_USER,
+            #     [receiver],
+            #     fail_silently=False,
+            #     )
             messages.success(
                 request,
                 'Your request has been sent succesfully.' +
                 ' We will contact you shortly'
                 )
-            # subject = request.POST.get('first_name')
-            # message = request.POST.get('last_name')
-            # email = request.POST.get('email')
-            # send_mail(
-            #     subject,
-            #     message,
-            #     settings.EMAIL_HOST_USER,
-            #     [email],
-            #     fail_silently=False,
-            #     )
+            form.save()
+            form = EventBooking()
     else:
         form = EventBooking()
     context = {'form': form}
     return render(request, "events.html", context)
-
