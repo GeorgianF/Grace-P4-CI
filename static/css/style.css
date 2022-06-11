@@ -516,6 +516,36 @@ a.btn-index:hover::before{
     outline: none;
 }
 
+/* ----- LOGIN PAGE ----- */
+
+#sign-in-container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size: 22px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#sign-in-container p {
+    align-items: center;
+}
+
+#sign-in-container label {
+    display: none;
+}
+
+#sign-in-container input[type=checkbox] {
+    display: none;
+}
+
+#sign-in-container input[type=text] {
+    width: 60%;
+}
+
+#sign-in-container input[type=password] {
+    width: 60%;
+}
+
+
 /* ---- Media Queries ----- */
 
 @media only screen and (max-width: 992px) {
