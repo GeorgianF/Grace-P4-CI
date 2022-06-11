@@ -160,7 +160,7 @@ a.btn-index::before {
     transition-delay: 0.1s;
 }
 
-a.btn-index:hover::before{
+a.btn-index:hover::before {
     transform: translateX(100%) rotate(45deg);
 }
 
@@ -514,6 +514,7 @@ a.btn-index:hover::before{
 .btn-dark {
     letter-spacing: 5px;
     outline: none;
+    margin-bottom: 50px;
 }
 
 /* ----- LOGIN PAGE ----- */
@@ -530,11 +531,8 @@ a.btn-index:hover::before{
 }
 
 #sign-in-container label {
-    display: none;
-}
-
-#sign-in-container input[type=checkbox] {
-    display: none;
+    text-transform: uppercase;
+    display: block;
 }
 
 #sign-in-container input[type=text] {
@@ -564,8 +562,32 @@ a.btn-index:hover::before{
     width: 60%;
 }
 
+#sign-up-container a {
+    color: black;
+}
 
+.errorlist {
+    color: red;
+    list-style-type: none;
+    padding: 0;
+}
 
+/* ----- SIGN OUT PAGE ----- */
+
+#sign-out-container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sign-out-container p {
+    font-size: 24px;
+}
 
 /* ---- Media Queries ----- */
 
