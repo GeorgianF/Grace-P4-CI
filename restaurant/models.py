@@ -6,7 +6,6 @@ from phonenumber_field.modelfields import PhoneNumberField
 # https://docs.djangoproject.com/en/4.0/ref/models/fields/
 # https://pypi.org/project/django-multiselectfield/
 
-
 class Course(models.Model):
     name = models.CharField(max_length=50)
     slug = models.SlugField(blank=True, null=True, unique=True)

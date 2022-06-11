@@ -545,6 +545,27 @@ a.btn-index:hover::before{
     width: 60%;
 }
 
+/* ----- SIGN UP PAGE ----- */
+
+#sign-up-container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size: 22px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#sign-up-container label {
+    display: block;
+}
+
+#sign-up-container input[type=text],
+#sign-up-container input[type=password],
+#sign-up-container input[type=email] {
+    width: 60%;
+}
+
+
+
 
 /* ---- Media Queries ----- */
 
