@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Course, EventForm
+from .models import Course, EventForm, Booking
 
 
 class CourseAdmin(admin.ModelAdmin):
@@ -12,5 +12,16 @@ class EventFormAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'last_name', 'phone_no', 'event_date')
 
 
+class BookingAdmin(admin.ModelAdmin):
+    list_display = (
+        'user',
+        'booking_name',
+        'date',
+        'arrival_time',
+        'allergies'
+        )
+
+
 courses = admin.site.register(Course, CourseAdmin)
 events = admin.site.register(EventForm, EventFormAdmin)
+booking = admin.site.register(Booking, BookingAdmin)

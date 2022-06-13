@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import EventForm
+from .models import EventForm, Booking
 
 
 class EventBooking(ModelForm):
@@ -48,4 +48,41 @@ class EventBooking(ModelForm):
 
     class Meta:
         model = EventForm
+        fields = "__all__"
+
+
+class ReservationForm(ModelForm):
+    user = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                }
+            )
+        )
+    booking_name = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                'class': 'form-control',
+                }
+            )
+        )
+    date = forms.DateField(
+        input_formats=['%d/%m/%Y %H:%M'],
+        widget=forms.DateTimeInput(attrs={
+            'class': 'form-control',
+            'id': 'datetimepicker'
+        }))
+    arrival_time = forms.MultipleChoiceField(
+        required=True,
+        widget=forms.CheckboxSelectMultiple,
+        choices=Booking.BookingTime
+        )
+    allergies = forms.MultipleChoiceField(
+        required=True,
+        widget=forms.CheckboxSelectMultiple,
+        choices=Booking.ALLERGENS
+        )
+
+    class Meta:
+        model = Booking
         fields = "__all__"

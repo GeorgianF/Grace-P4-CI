@@ -1,10 +1,13 @@
+import datetime
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils.text import slugify
 from multiselectfield import MultiSelectField
 from phonenumber_field.modelfields import PhoneNumberField
 
 # https://docs.djangoproject.com/en/4.0/ref/models/fields/
 # https://pypi.org/project/django-multiselectfield/
+
 
 class Course(models.Model):
     name = models.CharField(max_length=50)
@@ -61,6 +64,9 @@ class Course(models.Model):
 
 
 class EventForm(models.Model):
+    """
+    Event form model
+    """
     user_email = models.EmailField(max_length=50)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -73,3 +79,60 @@ class EventForm(models.Model):
 
     def __str__(self):
         return str(self.first_name + " " + self.last_name)
+
+
+class Booking(models.Model):
+    """
+    Booking model
+    """
+    class ALLERGENS(models.TextChoices):
+        """
+        Allergies
+        """
+        NO_ALLERGIES = 'No Allergies'
+        DAIRY = 'Dairy'
+        EGGS = 'Eggs'
+        FISH = 'Fish'
+        SHELLFISH = 'Shelfish'
+        NUTS = 'Nuts'
+        PEANUTS = 'Peanuts'
+        GLUTEN = 'Gluten'
+        SOY = 'Soy'
+
+    # https://docs.djangoproject.com/en/4.0/ref/models/fields/
+    class BookingTime(datetime.time, models.Choices):
+        """
+        Subclass appointment times for start_time field
+        """
+        PM_1700 = 17, 0, 0, '17:00'
+        PM_1730 = 17, 3, 0, '17:30'
+        PM_1800 = 18, 0, 0, '18:00'
+        PM_1830 = 18, 3, 0, '18:30'
+        PM_1900 = 19, 0, 0, '19:00'
+        PM_1930 = 19, 3, 0, '19:30'
+        PM_2000 = 20, 0, 0, '20:00'
+        PM_2030 = 20, 3, 0, '20:30'
+        PM_2100 = 21, 0, 0, '21:00'
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    booking_name = models.CharField(max_length=50, null=False, blank=False)
+    date = models.DateField(null=False, blank=False)
+    arrival_time = models.TimeField(
+        choices=BookingTime.choices,
+        null=False,
+        blank=False,
+        default=BookingTime.PM_1700
+        )
+    allergies = models.CharField(
+        choices=ALLERGENS.choices,
+        max_length=25,
+        default=ALLERGENS.NO_ALLERGIES)
+
+    class Meta:
+        """
+        Order bookings by time
+        """
+        ordering = ['date', 'arrival_time']
+
+    def __str__(self):
+        return str(self.user)

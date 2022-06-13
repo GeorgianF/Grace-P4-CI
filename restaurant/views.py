@@ -1,13 +1,20 @@
-from django.shortcuts import render
+from datetime import datetime
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.views.generic import ListView
 from django.contrib import messages
-from django.conf import settings
-from django.core.mail import send_mail
-from .models import Course
-from .forms import EventBooking
+# from django.conf import settings
+# from django.core.mail import send_mail
+from .models import Course, Booking
+from .forms import EventBooking, ReservationForm
+
 
 
 # Create your views here.
+
+NUMBER_OF_RESERVATIONS_PER_CLIENT = 1
+
 
 class CourseListViews(ListView):
     model = Course
@@ -54,6 +61,9 @@ def faq_view(request):
 
 
 def events_view(request):
+    """
+    SEND EVENTS FORM
+    """
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -79,3 +89,59 @@ def events_view(request):
         form = EventBooking()
     context = {'form': form}
     return render(request, "events.html", context)
+
+
+def view_booking(request):
+    """
+    View booking
+    """
+    if request.method == 'POST':
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            messages.success(
+                request,
+                'Your request has been sent succesfully registered'
+                )
+            form.save()
+            form = ReservationForm()
+    else:
+        form = ReservationForm()
+    context = {'form': form}
+    return render(request, "booking.html", context)
+
+
+# @login_required()
+# def create_booking(request):
+#     """
+#     Create booking
+#     """
+#     user = get_object_or_404(User, username=request.user)
+#     if request.method == 'POST':
+#         form = ReservationForm(request.POST)
+#         if form.is_valid():
+#             reservation_date = form.cleaned_data['date']
+#             reservation_time = form.cleaned_data['arrival_time']
+#             reservation_name = form.cleaned_data['booking_name']
+#             req_reservation_date = reservation_date.strftime("%A, %d %B %Y")
+#             req_reservation_time = reservation_time.strftime("%-I%p")
+#             num_reservations = Booking.objects.filter(
+#                 date=req_reservation_date,
+#                 start_time=req_reservation_time).count()
+#             if num_reservations >= NUMBER_OF_RESERVATIONS_PER_CLIENT:
+#                 messages.error(
+#                     request, 'No appointment is available on '
+#                     f'{req_reservation_date} at {req_reservation_time}.')
+#                 return redirect('booking.html')
+#             else:
+#                 form.instance.user = user
+#                 form.save()
+#                 messages.success(
+#                     request,
+#                     f'Your appointment for {reservation_name} '
+#                     'has been added to our restaurant.')
+#                 return redirect('booking.html')
+#     form = Booking()
+#     context = {
+#         'form': form
+#     }
+#     return render(request, 'booking.html', context)
