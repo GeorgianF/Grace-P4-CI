@@ -72,17 +72,19 @@ class ReservationForm(ModelForm):
             'class': 'form-control',
             'id': 'datetimepicker'
         }))
-    arrival_time = forms.MultipleChoiceField(
-        required=True,
-        widget=forms.CheckboxSelectMultiple,
-        choices=Booking.BookingTime
-        )
-    allergies = forms.MultipleChoiceField(
-        required=True,
-        widget=forms.CheckboxSelectMultiple,
-        choices=Booking.ALLERGENS
-        )
+
+    event_details = forms.CharField(widget=forms.Textarea(
+        attrs={
+            'class': 'form-control',
+            }
+        ))
 
     class Meta:
         model = Booking
-        fields = "__all__"
+        fields = fields = [
+            'user',
+            'booking_name',
+            'date',
+            'event_details',
+            'allergies',
+            ]

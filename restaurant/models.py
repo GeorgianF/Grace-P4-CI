@@ -52,7 +52,7 @@ class Course(models.Model):
     class Meta:
         ordering = ['name']
 
-# https://stackoverflow.com/questions/837828/how-do-i-create-a-slug-in-django
+    # https://stackoverflow.com/questions/837828/how-do-i-create-a-slug-in-django
 
     def save(self, *args, **kwargs):
         if not self.slug and self.name:
@@ -102,7 +102,7 @@ class Booking(models.Model):
     # https://docs.djangoproject.com/en/4.0/ref/models/fields/
     class BookingTime(datetime.time, models.Choices):
         """
-        Subclass appointment times for start_time field
+        Subclass appointment times for arrival_time field
         """
         PM_1700 = 17, 0, 0, '17:00'
         PM_1730 = 17, 3, 0, '17:30'
@@ -117,6 +117,7 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     booking_name = models.CharField(max_length=50, null=False, blank=False)
     date = models.DateField(null=False, blank=False)
+    event_details = models.CharField(max_length=500)
     arrival_time = models.TimeField(
         choices=BookingTime.choices,
         null=False,
@@ -126,7 +127,7 @@ class Booking(models.Model):
     allergies = MultiSelectField(
         choices=ALLERGENS.choices,
         default=ALLERGENS.NO_ALLERGIES)
-
+    
     class Meta:
         """
         Order bookings by time

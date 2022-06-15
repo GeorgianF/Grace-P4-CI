@@ -10,14 +10,30 @@
 <section id="booking-form">
     <div class="container">
 
-        <form action="/BookingForm/" method="POST">
+        <form action="/booking/" method="POST">
             <br>
             {% csrf_token %}
-            {{ form_booking.as_p }}
+            {{ form.as_p }}
             <input class="mt-2 mb-3 btn btn-dark" type="button" value="SUBMIT" data-bs-toggle="modal" data-bs-target="#myMessage">
             <input class="mt-2 mb-3 btn btn-dark" type="reset" value="RESET">
 
-
+            <div class="modal fade" id="myBookingMessage" tabindex="-1" aria-labelledby="myBookingMessageLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myBookingMessageLabel">Confirm Request</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to submit this event?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="mt-2 mb-3 btn btn-dark" data-bs-dismiss="modal">CLOSE</button>
+                            <button type="submit" class="mt-2 mb-3 btn btn-dark">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </section>

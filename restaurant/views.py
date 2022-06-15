@@ -11,9 +11,6 @@ from .forms import EventBooking, ReservationForm
 
 # Create your views here.
 
-NUMBER_OF_RESERVATIONS_PER_CLIENT = 1
-
-
 class CourseListViews(ListView):
     model = Course
     queryset = Course.objects.order_by('course_type')
@@ -90,15 +87,15 @@ def booking_view(request):
     Booking form
     """
     if request.method == 'POST':
-        form_booking = ReservationForm(request.POST)
-        if form_booking.is_valid():
+        form = ReservationForm(request.POST)
+        if form.is_valid():
             messages.success(
                 request,
                 'Your request has been sent succesfully registered'
                 )
-            form_booking.save()
-            form_booking = ReservationForm()
+            form.save()
+            form = ReservationForm()
     else:
-        form_booking = ReservationForm()
-    context = {'form_booking': form_booking}
-    return render(request, "booking.html", context)
+        form = ReservationForm()
+    context = {'form': form}
+    return render(request, 'booking.html', context)
