@@ -11,7 +11,7 @@
         <form action="/events/" method="POST">
             <br>
             {%csrf_token%}
-            {{ form.as_p }}
+            {{ form_events.as_p }}
             <input class="mt-2 mb-3 btn btn-dark" type="button" value="SUBMIT" data-bs-toggle="modal" data-bs-target="#myMessage">
             <input class="mt-2 mb-3 btn btn-dark" type="reset" value="RESET">
 

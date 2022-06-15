@@ -595,6 +595,11 @@ a.btn-index:hover::before {
     font-size: 24px;
 }
 
+
+/* ----- BOOKING PAGE ----- */
+
+
+
 /* ---- Media Queries ----- */
 
 @media only screen and (max-width: 992px) {

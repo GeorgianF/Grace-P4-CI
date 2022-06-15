@@ -2,9 +2,25 @@
 
 {% block content %}
 
-<section id="events-header">
+<section id="booking-header">
     <h1>BOOK A TABLE</h1>
 </section>
 
 
-{%endblock%}
+<section id="booking-form">
+    <div class="container">
+
+        <form action="/BookingForm/" method="POST">
+            <br>
+            {% csrf_token %}
+            {{ form_booking.as_p }}
+            <input class="mt-2 mb-3 btn btn-dark" type="button" value="SUBMIT" data-bs-toggle="modal" data-bs-target="#myMessage">
+            <input class="mt-2 mb-3 btn btn-dark" type="reset" value="RESET">
+
+
+        </form>
+    </div>
+</section>
+
+
+{% endblock %}

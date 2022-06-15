@@ -123,9 +123,8 @@ class Booking(models.Model):
         blank=False,
         default=BookingTime.PM_1700
         )
-    allergies = models.CharField(
+    allergies = MultiSelectField(
         choices=ALLERGENS.choices,
-        max_length=25,
         default=ALLERGENS.NO_ALLERGIES)
 
     class Meta:
