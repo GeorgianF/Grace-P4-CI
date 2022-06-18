@@ -1,6 +1,6 @@
-from django.shortcuts import render
-# from django.contrib.auth.decorators import login_required
-# from django.contrib.auth.models import User
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.views.generic import ListView
 from django.contrib import messages
 # from django.conf import settings
@@ -82,12 +82,15 @@ def events_view(request):
     return render(request, "events.html", context)
 
 
+@login_required()
 def booking_view(request):
     """
     Booking form
     """
+    user = get_object_or_404(User, username=request.user)
     if request.method == 'POST':
         form = ReservationForm(request.POST)
+        form.instance.user = user
         if form.is_valid():
             messages.success(
                 request,

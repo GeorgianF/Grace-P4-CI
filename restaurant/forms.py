@@ -73,7 +73,7 @@ class ReservationForm(ModelForm):
             'id': 'datetimepicker'
         }))
 
-    event_details = forms.CharField(widget=forms.Textarea(
+    booking_details = forms.CharField(widget=forms.Textarea(
         attrs={
             'class': 'form-control',
             }
@@ -85,6 +85,6 @@ class ReservationForm(ModelForm):
             'user',
             'booking_name',
             'date',
-            'event_details',
+            'booking_details',
             'allergies',
             ]

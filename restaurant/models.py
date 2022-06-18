@@ -117,17 +117,15 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     booking_name = models.CharField(max_length=50, null=False, blank=False)
     date = models.DateField(null=False, blank=False)
-    event_details = models.CharField(max_length=500)
+    booking_details = models.CharField(max_length=500)
     arrival_time = models.TimeField(
         choices=BookingTime.choices,
         null=False,
         blank=False,
         default=BookingTime.PM_1700
         )
-    allergies = MultiSelectField(
-        choices=ALLERGENS.choices,
-        default=ALLERGENS.NO_ALLERGIES)
-    
+    allergies = MultiSelectField(choices=ALLERGENS.choices)
+
     class Meta:
         """
         Order bookings by time

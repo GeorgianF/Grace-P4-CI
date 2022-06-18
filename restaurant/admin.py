@@ -9,7 +9,13 @@ class CourseAdmin(admin.ModelAdmin):
 
 
 class EventFormAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'phone_no', 'event_date')
+    list_display = (
+        'first_name',
+        'last_name',
+        'phone_no',
+        'event_date',
+        'event_details'
+        )
 
 
 class BookingAdmin(admin.ModelAdmin):
@@ -18,7 +24,8 @@ class BookingAdmin(admin.ModelAdmin):
         'booking_name',
         'date',
         'arrival_time',
-        'allergies'
+        'allergies',
+        'booking_details'
         )
 
 
