@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import ListView
@@ -87,16 +87,18 @@ def booking_view(request):
     """
     Booking form
     """
-    user = get_object_or_404(User, username=request.user)
     if request.method == 'POST':
         form = ReservationForm(request.POST)
-        form.instance.user = user
+
         if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = User.objects.get(username=request.user.username)
+            booking.save()
+            
             messages.success(
                 request,
                 'Your request has been sent succesfully registered'
                 )
-            form.save()
             form = ReservationForm()
     else:
         form = ReservationForm()

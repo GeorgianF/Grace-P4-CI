@@ -52,13 +52,6 @@ class EventBooking(ModelForm):
 
 
 class ReservationForm(ModelForm):
-    user = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                'class': 'form-control',
-                }
-            )
-        )
     booking_name = forms.CharField(
         widget=forms.TextInput(
             attrs={
@@ -82,7 +75,7 @@ class ReservationForm(ModelForm):
     class Meta:
         model = Booking
         fields = fields = [
-            'user',
+            # 'user',
             'booking_name',
             'date',
             'booking_details',

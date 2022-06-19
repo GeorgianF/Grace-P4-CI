@@ -13,6 +13,7 @@
       <h1 class="d-flex justify-content-center mt-4 mb-4 text-decoration-underline">{% trans "SIGN IN" %}</h1>
 
       <p>If you have not created an account yet, then please sign up first.</p>
+      <p><strong><i class="fa fa-exclamation"></i> You will need an account to manage all of your reservations</strong></p>
 
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
