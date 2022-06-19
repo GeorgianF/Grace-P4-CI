@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -5,7 +6,7 @@ from django.views.generic import ListView
 from django.contrib import messages
 # from django.conf import settings
 # from django.core.mail import send_mail
-from .models import Course
+from .models import Course, Booking
 from .forms import EventBooking, ReservationForm
 
 
@@ -94,7 +95,6 @@ def booking_view(request):
             booking = form.save(commit=False)
             booking.user = User.objects.get(username=request.user.username)
             booking.save()
-            
             messages.success(
                 request,
                 'Your request has been sent succesfully registered'
@@ -104,3 +104,13 @@ def booking_view(request):
         form = ReservationForm()
     context = {'form': form}
     return render(request, 'booking.html', context)
+
+
+@login_required()
+def booking_view_update(request):
+    today_date = datetime.now()
+    bookings = Booking.objects.filter(date__gte=today_date)
+    context = {
+        'bookings': bookings
+    }
+    return render(request, 'booking-view-all.html', context)

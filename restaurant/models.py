@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from multiselectfield import MultiSelectField
 from phonenumber_field.modelfields import PhoneNumberField
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 # https://docs.djangoproject.com/en/4.0/ref/models/fields/
 # https://pypi.org/project/django-multiselectfield/
@@ -62,6 +63,8 @@ class Course(models.Model):
     def __str__(self):
         return str(self.name)
 
+# Event form model for the the events.html page
+
 
 class EventForm(models.Model):
     """
@@ -79,6 +82,8 @@ class EventForm(models.Model):
 
     def __str__(self):
         return str(self.first_name + " " + self.last_name)
+
+# the booking model for the reservations
 
 
 class Booking(models.Model):
@@ -124,6 +129,10 @@ class Booking(models.Model):
         blank=False,
         default=BookingTime.PM_1700
         )
+    number_of_persons = models.IntegerField(default=2, validators=[
+            MaxValueValidator(6),
+            MinValueValidator(1)
+        ])
     allergies = MultiSelectField(choices=ALLERGENS.choices)
 
     class Meta:

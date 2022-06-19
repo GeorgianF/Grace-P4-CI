@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <h1>View Reservations</h1>
+</section>
+
+
+
+<div class="container reservation-table">
+    <div class="row reservation-table-row">
+        <div class="col-md-6 col-sm-8 col-10">
+            <table>
+                <thead>
+                    <tr>
+                        <th>USER</th>
+                        <th>BOOKING NAME</th>
+                        <th>DATE</th>
+                        <th>TIME</th>
+                        <th>DETAILS</th>
+                    </tr>
+                </thead>
+                {% for booking in bookings %}
+                <tr>
+                    {% if request.user.is_superuser or request.user.is_staff %}
+                    <td>{{ booking.user }}</td>
+                    {% else %}
+                        {% if booking.user == request.user %}
+                        <td>{{ booking.user }}</td>
+                        {% else %}
+                        <td>Anonymus</td>
+                        {% endif %}
+                    {% endif %}
+                
+                    <td>{{ booking.booking_name}}</td>
+                    <td>{{ booking.date}}</td>
+                    <td>{{ booking.arrival_time}}</td>
+                    <td>{{ booking.booking_details}}</td>
+                    {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %}
+                        <td><a href="#">UPDATE</a></td>
+                        <td><a href="#">DELETE</a></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

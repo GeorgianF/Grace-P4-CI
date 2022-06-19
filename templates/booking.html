@@ -14,12 +14,24 @@
             <br>
             {% csrf_token %}
             {{ form.as_p }}
-            <input class="mt-2 mb-3 btn btn-dark" type="submit" value="SUBMIT" data-bs-toggle="modal" data-bs-target="#myMessage">
-            <input class="mt-2 mb-3 btn btn-dark" type="reset" value="RESET">
+            <div class="row form-buttons">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                    <input class="mt-2 mb-3 btn btn-dark" type="button" value="SUBMIT" data-bs-toggle="modal"
+                        data-bs-target="#myBookingMessage">
+                    <input class="mt-2 mb-3 btn btn-dark" type="reset" value="RESET">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-uppercase" >
+                    <a href="{% url 'update-booking' %}" class="btn btn-dark" id="view-bookings-button">View All Bookings <i class="fa fa-arrow-right f5"></i> </a>
+                </div>
+            </div>
 
         {% endif%}
 
-            <!-- <div class="modal fade" id="myBookingMessage" tabindex="-1" aria-labelledby="myBookingMessageLabel" aria-hidden="true">
+        
+
+            <div class="modal fade" id="myBookingMessage" tabindex="-1" aria-labelledby="myBookingMessageLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -27,7 +39,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Are you sure you want to submit this event?
+                            Are you sure you want to submit this reservation?
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="mt-2 mb-3 btn btn-dark" data-bs-dismiss="modal">CLOSE</button>
@@ -36,7 +48,7 @@
                     </div>
                 </div>
             </div>
-        </form> -->
+        </form>
     </div>
 </section>
 

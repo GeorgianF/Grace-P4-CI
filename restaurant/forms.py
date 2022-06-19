@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from django import forms
 from .models import EventForm, Booking
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class EventBooking(ModelForm):
@@ -72,12 +73,17 @@ class ReservationForm(ModelForm):
             }
         ))
 
+    number_of_persons = forms.IntegerField(
+        label='Persons (*Maximum of 6 persons' + ' ' +
+        'otherwise contact us via the events form)'
+        )
+
     class Meta:
         model = Booking
         fields = fields = [
-            # 'user',
             'booking_name',
             'date',
             'booking_details',
+            'number_of_persons',
             'allergies',
             ]

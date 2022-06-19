@@ -598,6 +598,88 @@ a.btn-index:hover::before {
 
 /* ----- BOOKING PAGE ----- */
 
+#booking-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    text-transform: uppercase;
+}
+
+#booking-form {
+    font-size: 22px;
+    max-width: fit-content;
+    margin: 20px auto;
+    text-transform: uppercase;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+#booking-form textarea {
+    height: 100px;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-transform: uppercase;
+}
+
+#id_allergies {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+#id_allergies li {
+    margin-right: 20px;
+}
+
+#view-bookings-button {
+    position: absolute;
+    right: 2%;
+    bottom: 3%;
+    margin-bottom: 0;
+}
+
+#view-bookings-button .fa {
+    font-size: 16px;
+}
+
+
+/* ----- VIEW RESERVATIONS PAGE ----- */
+
+.reservation-table {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 50px;
+    font-size: 24px;
+}
+
+.reservation-table {
+    padding: 25px;
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 30px;
+    text-align: center;
+
+  }
+
+th,
+td {
+  width: 250px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+
 
 
 /* ---- Media Queries ----- */
