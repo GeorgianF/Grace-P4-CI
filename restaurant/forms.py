@@ -1,7 +1,6 @@
 from django.forms import ModelForm
 from django import forms
 from .models import EventForm, Booking
-from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class EventBooking(ModelForm):
