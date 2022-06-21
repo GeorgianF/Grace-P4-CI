@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <h1>UPDATE YOUR RESERVATION</h1>
+</section>
+
+<div class="container">
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type="submit" value="UPDATE">
+</form>
+
+</div>
+
+{% endblock %}

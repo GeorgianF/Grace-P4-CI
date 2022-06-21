@@ -5,9 +5,6 @@
 <section>
     <h1>View Reservations</h1>
 </section>
-
-
-
 <div class="container reservation-table">
     <div class="row reservation-table-row">
         <div class="col-md-6 col-sm-8 col-10">
@@ -38,7 +35,7 @@
                     <td>{{ booking.arrival_time}}</td>
                     <td>{{ booking.booking_details}}</td>
                     {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %}
-                        <td><a href="#">UPDATE</a></td>
+                        <td><a href="{% url 'edit-booking' booking.id %}">UPDATE</a></td>
                         <td><a href="#">DELETE</a></td>
                     {% endif %}
                 </tr>

@@ -1,5 +1,5 @@
 from datetime import datetime
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import ListView
@@ -114,3 +114,18 @@ def booking_view_update(request):
         'bookings': bookings
     }
     return render(request, 'booking-view-all.html', context)
+
+
+@login_required()
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == "POST":
+        form = ReservationForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('update-booking')
+    form = ReservationForm(instance=booking)
+    context = {
+        'form': form
+    }
+    return render(request, 'booking-edit.html', context)
