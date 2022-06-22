@@ -35,10 +35,10 @@ class EventBooking(ModelForm):
             )
         )
     event_date = forms.DateField(
-        input_formats=['%d/%m/%Y %H:%M'],
+        input_formats=['%d/%m/%Y'],
         widget=forms.DateTimeInput(attrs={
             'class': 'form-control',
-            'id': 'datetimepicker'
+            'id': 'datepicker1'
         }))
     event_details = forms.CharField(widget=forms.Textarea(
             attrs={

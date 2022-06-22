@@ -43,7 +43,7 @@ $(function () {
   var today = new Date();
   var tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
-  $("#datepicker").datepicker({
+  $("#datepicker, #datepicker1").datepicker({
     format: 'dd/mm/yyyy',
     startDate : today,
     filter: function(date) {
