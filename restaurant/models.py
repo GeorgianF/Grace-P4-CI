@@ -109,15 +109,15 @@ class Booking(models.Model):
         """
         Subclass appointment times for arrival_time field
         """
-        PM_1700 = 17, 0, 0, '17:00'
-        PM_1730 = 17, 3, 0, '17:30'
-        PM_1800 = 18, 0, 0, '18:00'
-        PM_1830 = 18, 3, 0, '18:30'
-        PM_1900 = 19, 0, 0, '19:00'
-        PM_1930 = 19, 3, 0, '19:30'
-        PM_2000 = 20, 0, 0, '20:00'
-        PM_2030 = 20, 3, 0, '20:30'
-        PM_2100 = 21, 0, 0, '21:00'
+        PM_1700 = 17, 00, 00, '17:00'
+        PM_1730 = 17, 30, 00, '17:30'
+        PM_1800 = 18, 00, 00, '18:00'
+        PM_1830 = 18, 30, 00, '18:30'
+        PM_1900 = 19, 00, 00, '19:00'
+        PM_1930 = 19, 30, 00, '19:30'
+        PM_2000 = 20, 00, 00, '20:00'
+        PM_2030 = 20, 30, 00, '20:30'
+        PM_2100 = 21, 00, 00, '21:00'
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     booking_name = models.CharField(max_length=50, null=False, blank=False)

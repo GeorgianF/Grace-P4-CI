@@ -2,20 +2,18 @@
 
 {% block content %}
 
-<section>
+<section id="view-reservations-header">
     <h1>View Reservations</h1>
 </section>
-<div class="container reservation-table">
+<div class="container" >
     <div class="row reservation-table-row">
-        <div class="col-md-6 col-sm-8 col-10">
+        <div class="col-lg-6 offset-3 col-md-6 col-sm-10 col-10" id="reservation-table">
             <table>
                 <thead>
-                    <tr>
+                    <tr class="border-bottom">
                         <th>USER</th>
-                        <th>BOOKING NAME</th>
                         <th>DATE</th>
                         <th>TIME</th>
-                        <th>DETAILS</th>
                     </tr>
                 </thead>
                 {% for booking in bookings %}
@@ -24,28 +22,29 @@
                     <td>{{ booking.user }}</td>
                     {% else %}
                         {% if booking.user == request.user %}
-                        <td>{{ booking.user }}</td>
+                            <td>{{ booking.user }}</td>
                         {% else %}
-                        <td>Anonymus</td>
+                            <td>Anonymus</td>
                         {% endif %}
                     {% endif %}
-                
-                    <td>{{ booking.booking_name}}</td>
                     <td>{{ booking.date}}</td>
-                    <td>{{ booking.arrival_time}}</td>
-                    <td>{{ booking.booking_details}}</td>
+                    <td class="text-uppercase">{{ booking.arrival_time}}</td>
                     {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %}
-                        <td><a href="{% url 'edit-booking' booking.id %}">UPDATE</a></td>
-                        <td><a href="#">DELETE</a></td>
+                        <td><a id="btn-update" class="btn" href="{% url 'edit-booking' booking.id %}">UPDATE</a></td>
+                        <td><a id="btn-delete" class="btn" href="#">DELETE</a></td>
                     {% endif %}
                 </tr>
                 {% endfor %}
+
 
             </table>
         </div>
     </div>
 </div>
 
+<button>
+
+</button>
 
 
 
