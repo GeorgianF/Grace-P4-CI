@@ -43,35 +43,15 @@ $(function () {
   var today = new Date();
   var tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
-  $("#datetimepicker").datetimepicker({
-    format: 'd/m/Y H:i',
-    allowTimes:[
-      '17:00',
-      '17:30',
-      '18:00',
-      '18:30',
-      '19:00',
-      '19:30',
-      '20:00',
-      '20:30',
-      '21:00',
-    ],
-    theme:'dark',
-    disabledDates: [
-      new Date(),
-      '12.06.2022','19.06.2022','26.06.2022',
-      '03.07.2022','10.07.2022','17.07.2022',
-      '24.07.2022','31.07.2022','07.08.2022',
-      '14.08.2022','21.08.2022','28.08.2022',
-      '04.09.2022','11.09.2022','18.09.2022',
-      '25.09.2022','02.10.2022','09.10.2022',
-      '16.10.2022','23.10.2022','30.10.2022',
-      '06.11.2022','13.11.2022','20.11.2022',
-      '27.11.2022','04.12.2022','11.12.2022',
-      '18.12.2022','25.12.2022'],
-	  formatDate:'d.m.Y',
-    minDate: tomorrow,
-  });
+  $("#datepicker").datepicker({
+    format: 'dd/mm/yyyy',
+    startDate : today,
+    filter: function(date) {
+      if (date.getDay() == 0) {
+        return false; // Disable all Sundays, but still leave months/years, whose first day is a Sunday, enabled.
+      }
+    }
+    });
 });
 
 // MESSAGES

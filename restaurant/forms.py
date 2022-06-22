@@ -60,11 +60,13 @@ class ReservationForm(ModelForm):
             )
         )
     date = forms.DateField(
-        input_formats=['%d/%m/%Y %H:%M'],
+        input_formats=['%d/%m/%Y'],
         widget=forms.DateTimeInput(attrs={
             'class': 'form-control',
-            'id': 'datetimepicker'
+            'id': 'datepicker'
         }))
+
+    arrival_time = forms.TimeInput()
 
     booking_details = forms.CharField(widget=forms.Textarea(
         attrs={
@@ -82,6 +84,7 @@ class ReservationForm(ModelForm):
         fields = fields = [
             'booking_name',
             'date',
+            'arrival_time',
             'booking_details',
             'number_of_persons',
             'allergies',
