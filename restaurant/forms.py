@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from django import forms
 from .models import EventForm, Booking
+from django.conf import settings
 
 
 class EventBooking(ModelForm):
@@ -60,7 +61,7 @@ class ReservationForm(ModelForm):
             )
         )
     date = forms.DateField(
-        input_formats=['%d/%m/%Y'],
+        input_formats=settings.DATE_INPUT_FORMATS,
         widget=forms.DateTimeInput(attrs={
             'class': 'form-control',
             'id': 'datepicker'

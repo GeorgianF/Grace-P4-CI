@@ -723,6 +723,27 @@ td {
     transform: scaleX(1);
 }
 
+/* ----- UPDATE RESERVATION ----- */
+
+#update-reservation-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    text-transform: uppercase;
+}
+
+#reservation-update-container {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0 auto;
+    font-size: 20px;
+    border: 1px solid black;
+    text-transform: uppercase;
+}
+
+#reservation-update-container textarea {
+    height: 100px;
+}
 
 
 /* ---- Media Queries ----- */

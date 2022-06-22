@@ -70,8 +70,9 @@ setTimeout(function(){
 $(placeholder).removeAttr('placeholder')
 
 // Set max number for number of persons that can book a table
+
 $(document).ready(function() {
-  $("input").attr({
+  $(':input[type="number"]').attr({
      "max" : 6,
      "min" : 1
   });

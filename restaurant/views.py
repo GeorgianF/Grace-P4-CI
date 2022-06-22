@@ -123,7 +123,16 @@ def edit_booking(request, booking_id):
         form = ReservationForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
+            messages.success(
+                request,
+                'Your request has been sent succesfully updated'
+                )
             return redirect('update-booking')
+        else:
+            messages.error(
+                request,
+                'Your request is not valid'
+                )
     form = ReservationForm(instance=booking)
     context = {
         'form': form

@@ -2,18 +2,23 @@
 
 {% block content %}
 
-<section>
+<section id="update-reservation-header">
     <h1>UPDATE YOUR RESERVATION</h1>
 </section>
 
-<div class="container">
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-
-    <input type="submit" value="UPDATE">
-</form>
-
+<div class="container mb-6">
+    <div class="row">
+        <div class="col-md-4 col-sm-10 col-10 p-3" id="reservation-update-container">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input class="btn btn-dark mb-3" type="submit" value="UPDATE">
+                <a class="btn btn-dark mb-3" href="{% url 'update-booking' %}"> GO BACK TO BOOKINGS</a>
+            </form>
+        </div>
+    </div>
 </div>
+<br>
+<br>
 
 {% endblock %}
