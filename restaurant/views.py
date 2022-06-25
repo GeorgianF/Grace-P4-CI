@@ -86,7 +86,7 @@ def events_view(request):
 @login_required()
 def booking_view(request):
     """
-    Booking form
+    BOOKING FORM
     """
     if request.method == 'POST':
         form = ReservationForm(request.POST)
@@ -108,6 +108,9 @@ def booking_view(request):
 
 @login_required()
 def booking_view_update(request):
+    """
+    VIEW ALL BOOKINGS
+    """
     today_date = datetime.now()
     bookings = Booking.objects.filter(date__gte=today_date)
     context = {
@@ -118,6 +121,9 @@ def booking_view_update(request):
 
 @login_required()
 def edit_booking(request, booking_id):
+    """
+    EDIT RESERVATIONS
+    """
     booking = get_object_or_404(Booking, id=booking_id)
     if request.method == "POST":
         form = ReservationForm(request.POST, instance=booking)
@@ -138,3 +144,13 @@ def edit_booking(request, booking_id):
         'form': form
     }
     return render(request, 'booking-edit.html', context)
+
+
+@login_required()
+def delete_booking(request, booking_id):
+    """
+    DELETE BOOKING
+    """
+    booking = get_object_or_404(Booking, id=booking_id)
+    booking.delete()
+    return redirect('booking-view-all.html')
