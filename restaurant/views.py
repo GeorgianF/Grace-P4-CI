@@ -153,4 +153,8 @@ def delete_booking(request, booking_id):
     """
     booking = get_object_or_404(Booking, id=booking_id)
     booking.delete()
-    return redirect('booking-view-all.html')
+    messages.success(
+            request,
+            'Your request has been sent succesfully deleted'
+            )
+    return redirect('update-booking')
