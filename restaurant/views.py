@@ -90,7 +90,6 @@ def booking_view(request):
     """
     if request.method == 'POST':
         form = ReservationForm(request.POST)
-
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = User.objects.get(username=request.user.username)
