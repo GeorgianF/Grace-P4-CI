@@ -135,6 +135,7 @@ footer i {
 
 .landing-page {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -757,6 +758,11 @@ td {
 /* ---- Media Queries ----- */
 
 @media only screen and (max-width: 992px) {
+    footer {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
     .card {
         margin-bottom: 20px;
     }
@@ -767,6 +773,21 @@ td {
 }
 
 @media only screen and (max-width: 768px) {
+    #social-icons {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .me-4.text-reset.text-decoration-none {
+        margin: 0px 15px !important;
+        padding: 5px;
+    }
+
     .gallery-container {
         margin: 10px;
         grid-template-columns: repeat(2, 1fr);
@@ -802,6 +823,23 @@ td {
 }
 
 @media only screen and (max-width: 425px) {
+    .landing-page {
+        margin: 0;
+        padding: 0;
+    }
+
+    .landing-page img {
+        width: 300px;
+    }
+
+    #quote {
+        font-size: 20px;
+    }
+
+    a.btn-index {
+        font-size: 20px;
+    }
+
     .gallery-container {
         margin: 2px;
         grid-template-columns: repeat(2, 1fr);
@@ -825,6 +863,20 @@ td {
 
     #events-form {
         max-width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #quote {
+        font-size: 18px;
+    }
+
+    .me-4.text-reset.text-decoration-none {
+        margin: 0px 10px !important;
+    }
+
+    a i {
+        font-size: 16px;
     }
 }
 
