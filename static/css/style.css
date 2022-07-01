@@ -316,6 +316,9 @@ a.btn-index:hover::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 .gallery-container {
@@ -393,6 +396,9 @@ a.btn-index:hover::before {
 
 .team-heading {
     margin: 50px 0;
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 .img-thumbnail {
@@ -409,9 +415,18 @@ a.btn-index:hover::before {
 
 .faq-heading {
     margin: 50px 0;
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 /* ----- MENU PAGE ----- */
+
+#menu-header {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
 
 .card-menu {
     margin: 0 auto ;
@@ -544,7 +559,7 @@ a.btn-index:hover::before {
     letter-spacing: 5px;
     outline: none;
     margin-bottom: 50px;
-    font-size: 22px;
+    font-size: 18px;
     /* border-radius */
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -619,7 +634,7 @@ a.btn-index:hover::before {
 }
 
 #sign-up-container a {
-    color: black;
+    color: navy;
 }
 
 .errorlist {
@@ -728,6 +743,8 @@ input:focus{
     justify-content: center;
     margin: 50px 0;
     text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 50px;
 }
 
 #reservation-table {
