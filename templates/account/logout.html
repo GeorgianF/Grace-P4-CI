@@ -6,9 +6,9 @@
 
 {% block content %}
 
-<div class="container ">
+<div class="container" id="sign-out-container">
   <div class="row">
-    <div class="col-md-4 offset-4 com-sm-4 col-4" id="sign-out-container">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 com-sm-12 col-12" >
       <h1>{% trans "SO SOON..." %}</h1>
       <p>{% trans 'Are you sure you want to sign out?' %}</p>
       <form method="post" action="{% url 'account_logout' %}">
@@ -16,8 +16,10 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-dark" type="submit">{% trans 'SIGN OUT' %}</button>
-        <a class="btn btn-dark" href="{% url 'home' %}">{% trans 'FORGOT SOMETHING...' %}</a>
+        <div class="buttons-container">
+          <button class="m-2 btn btn-dark fs-5" type="submit">{% trans 'SIGN OUT' %}</button>
+          <a class="m-2 btn btn-dark fs-5" href="{% url 'home' %}">{% trans 'NOT NOW' %}</a>
+        </div>
       </form>
 
     </div>
