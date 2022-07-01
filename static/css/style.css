@@ -72,7 +72,6 @@
     background: #827770;
     z-index: 1;
     transition: .5s;
-    opacity: 0.9;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -97,7 +96,6 @@
     letter-spacing: .2rem;
     text-decoration: none;
     margin: 10px;
-    padding-top: 20px;
 }
 
 #nav-bar ul li a:focus,
@@ -109,6 +107,10 @@
     color: rgba(181, 177, 177, 0.848);
 }
 
+#nav-bar ul li .disabled:hover {
+    color: rgba(181, 177, 177, 0.848);
+    cursor: not-allowed;
+}
 /* ---- FOOTER ---- */
 footer {
     font-size: 18px;
