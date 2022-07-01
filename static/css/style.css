@@ -928,6 +928,11 @@ td {
     #wine-list {
         flex-direction: column;
     }
+
+    .img-thumbnail {
+        height: 200px !important;
+        margin: auto;
+    }
 }
 
 /* ----- KeyFrames for grid  gallery ----- */
