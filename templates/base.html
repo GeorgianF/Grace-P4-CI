@@ -29,7 +29,11 @@
             <ul>
                 <li><a href="{% url 'home' %}">HOME</a></li>
                 <li><a href="{% url 'our-restaurant' %}">OUR RESTAURANT</a></li>
-                <li><a href="{% url 'booking' %}">RESERVATIONS</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'update-booking' %}">VIEW RESERVATIONS</a></li>
+                {% else %}
+                    <li><a href="{% url 'booking' %}">RESERVATIONS</a></li>
+                {% endif %}
                 <li><a href="{% url 'menu' %}">MENU</a></li>
                 <li><a href="{% url 'gallery' %}">GALLERY</a></li>
                 <li><a href="#" class="disabled">COOKBOOKS (COMING SOON)</a></li>
