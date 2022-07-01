@@ -146,6 +146,9 @@ a.btn-index {
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
+    background-color: #827369;
+    color: white;
+    border-radius: 0px 20px 0px 20px;
 }
 
 a.btn-index:hover {
