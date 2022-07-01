@@ -501,6 +501,10 @@ a.btn-index:hover::before {
     outline: none;
 }
 
+#wine-list a {
+    margin: 5px;
+}
+
 
 /* ----- EVENT PAGE ----- */
 
@@ -912,10 +916,6 @@ td {
         font-size: 16px;
     }
 
-    #testimonials {
-        display: none;
-    }
-
     .card-text {
         font-size: 14px;
     }
@@ -923,6 +923,10 @@ td {
     .features-1-row i {
         font-size: 20px;
         padding-bottom: 20px;
+    }
+
+    #wine-list {
+        flex-direction: column;
     }
 }
 
