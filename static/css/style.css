@@ -819,6 +819,11 @@ td {
     #events-form {
         max-width: 50vw;
     }
+
+    #sign-in-container,
+    #sign-up-container {
+        width: 60%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -885,6 +890,10 @@ td {
         max-width: 50vw;
     }
 
+    #sign-in-container,
+    #sign-up-container {
+        width: 70%;
+    }
     
 }
 
@@ -957,12 +966,16 @@ td {
         margin: 0;
     }
 
-    #sign-in-container {
+    #sign-in-container,
+    #sign-up-container {
         width: 90%;
     }
 
     #sign-in-container input[type=text],
-    #sign-in-container input[type=password] {
+    #sign-in-container input[type=password],
+    #sign-up-container input[type=text],
+    #sign-up-container input[type=password],
+    #sign-up-container input[type=email] {
         width: 100%;
     }
 }
