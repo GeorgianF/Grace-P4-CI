@@ -570,6 +570,7 @@ a.btn-index:hover::before {
     font-size: 14px !important;
     align-items: center;
     margin: 0 auto;
+    font-size: 22px !important;
 }
 
 #sign-in-container p {
@@ -592,10 +593,19 @@ a.btn-index:hover::before {
 /* ----- SIGN UP PAGE ----- */
 
 #sign-up-container {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    font-size: 22px;
+    /* border-radius */
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 30px 0px;
+    /* box-shadow */
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 10px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px;
+    font-size: 22px !important;
+    text-transform: uppercase;
     align-items: center;
     margin: 0 auto;
+    align-items: center;
 }
 
 #sign-up-container label {
@@ -630,6 +640,7 @@ a.btn-index:hover::before {
     align-items: center;
     justify-content: center;
     max-width: 500px;
+    align-items: center;
 }
 
 #sign-out-container h1 {
@@ -945,6 +956,15 @@ td {
         width: 100vw;
         margin: 0;
     }
+
+    #sign-in-container {
+        width: 90%;
+    }
+
+    #sign-in-container input[type=text],
+    #sign-in-container input[type=password] {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -980,10 +1000,6 @@ td {
 
     #events-header h1 {
         font-size: 22px;
-    }
-
-    .btn.btn-dark {
-        font-size: 14px;
     }
 
     #sign-out-container {
