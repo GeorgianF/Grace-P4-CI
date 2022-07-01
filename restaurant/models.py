@@ -1,10 +1,11 @@
 import datetime
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from multiselectfield import MultiSelectField
 from phonenumber_field.modelfields import PhoneNumberField
-from django.core.validators import MaxValueValidator, MinValueValidator
+
 
 # https://docs.djangoproject.com/en/4.0/ref/models/fields/
 # https://pypi.org/project/django-multiselectfield/

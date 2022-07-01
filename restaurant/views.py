@@ -83,21 +83,40 @@ def events_view(request):
     return render(request, "events.html", context)
 
 
+NUMBER_MAX_OF_BOOKINGS = 1
+
+
 @login_required()
 def booking_view(request):
     """
     BOOKING FORM
     """
+    user = get_object_or_404(User, username=request.user)
     if request.method == 'POST':
         form = ReservationForm(request.POST)
         if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = User.objects.get(username=request.user.username)
-            booking.save()
-            messages.success(
-                request,
-                'Your request has been sent succesfully registered'
-                )
+            requested_date = form.cleaned_data['date']
+            requested_time = form.cleaned_data['arrival_time']
+            check_for_same_booking = Booking.objects.filter(
+                date=requested_date,
+                arrival_time=requested_time
+                ).count()
+            if check_for_same_booking >= NUMBER_MAX_OF_BOOKINGS:
+                messages.error(
+                        request,
+                        f'Sorry! {user} ' +
+                        'No appointment is available on that date and time'
+                        )
+                return redirect('booking')
+            else:
+                form.instance.user = user
+                form.save()
+                messages.success(
+                    request,
+                    f'Thank you {user} ' +
+                    'Your appointment has been confirmed.'
+                    )
+                return redirect('booking')
             form = ReservationForm()
     else:
         form = ReservationForm()

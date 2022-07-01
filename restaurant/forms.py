@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from django import forms
-from .models import EventForm, Booking
 from django.conf import settings
+from .models import EventForm, Booking
 
 
 class EventBooking(ModelForm):
