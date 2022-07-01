@@ -788,6 +788,32 @@ td {
         padding: 5px;
     }
 
+    .restaurant-card {
+        width: 95%;
+    }
+
+    .testimonial-container {
+        width: 100%;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .review {
+        padding: 5px 2px 10px 2px;
+    }
+
+    #testimonials {
+        margin: -20px;
+    }
+
+    #testimonials .col-md-4 {
+        padding: 5px;
+    }
+
+    .features-1-row i {
+        font-size: 24px;
+    }
+
     .gallery-container {
         margin: 10px;
         grid-template-columns: repeat(2, 1fr);
@@ -809,6 +835,8 @@ td {
     #events-form {
         max-width: 50vw;
     }
+
+    
 }
 
 @media only screen and (max-width: 576px) {
@@ -819,6 +847,11 @@ td {
 
     #events-form {
         max-width: 70vw;
+    }
+
+    #testimonials,
+    #health-guidelines {
+        display: none;
     }
 }
 
@@ -877,6 +910,19 @@ td {
 
     a i {
         font-size: 16px;
+    }
+
+    #testimonials {
+        display: none;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .features-1-row i {
+        font-size: 20px;
+        padding-bottom: 20px;
     }
 }
 
