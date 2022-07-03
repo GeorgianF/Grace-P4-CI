@@ -559,7 +559,8 @@ a.btn-index:hover::before {
     letter-spacing: 5px;
     outline: none;
     margin-bottom: 50px;
-    font-size: 18px;
+    font-size: 16px;
+    padding: 5px 30px;
     /* border-radius */
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
