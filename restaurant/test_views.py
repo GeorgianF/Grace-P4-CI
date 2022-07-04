@@ -1,4 +1,4 @@
-from django.test import TestCase, Client
+from django.test import TestCase
 
 
 # Create your tests here.
@@ -14,9 +14,8 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'our-restaurant.html')
 
     def test_get_reservation_page_login(self):
-        c = Client()
-        c.login(username='test_client', password='somepassword')
         response = self.client.get('/booking/')
+        self.assertRedirects(response, '/accounts/login/?next=/booking/')
         self.assertEqual = (response.status_code, 200)
 
     def test_get_menu_page(self):
@@ -43,3 +42,14 @@ class TestViews(TestCase):
         response = self.client.get('/events/')
         self.assertEqual = (response.status_code, 200)
         self.assertTemplateUsed(response, 'events.html')
+
+    def test_can_make_reservation(self):
+        response = self.client.post('/booking/', )
+        self.assertRedirects(response, '/accounts/login/?next=/booking/')
+
+    # def test_can_delete_reservation(self):
+    #     booking = Booking.objects.create(booking_name=" ")
+    #     response = self.client.get(f'/delete/{booking.id}')
+    #     self.assertRedirects(response, '/')
+    #     existing_items = Booking.objects.filter(id=booking.id)
+    #     self.assertEqual(len(existing_items), 0)
