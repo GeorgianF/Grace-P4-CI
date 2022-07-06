@@ -1,108 +1,118 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Grace Restaurant**
+The restaurant is a fine dining restaurant located in the heart of Chicago. 
+The restaurant overlooks Cloud Gate, one of the most beautiful landmarks in Chicago. 
+Located here since 1998, it underwent a full-scale renovation and redesign in the summer of 2017.
 
-Welcome GeorgianF,
+[Deployed site](https://grace-restaurant-p4-ci.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# **Planning Phase**
+## **Site Objectives:**
+The restaurant wants to inform the visitors about a sustainable approach on food, with zero waste policy.
+It's actively involved in local comunities and has the mission to reduce the carbon footprint.
+It's using local source products, and presents them to the customer in a fine dining manner.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Feasibility study
 
-## Gitpod Reminders
+Grace Restaurant | Importance | Feasibility
+---|---|---
+User can make reservations | 5 | 5
+User can cancel reservations | 5 | 5
+User can update reservations | 5 | 5
+User profile | 5 | 5
+User log in | 5 | 5
+Landing page simple and a clear message | 5 | 5
+Manually add reservations (admin) | 5 | 5
+Event form  | 5 | 5
+View menu | 4 | 5 
+Know the team | 2 | 3
+Testimonials | 2 | 2 
+Being able to download wine and cocktail lists | 2 | 1 
+----------------------------------------|----|----
+Totals | 50 | 51
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## **Structure**   
+The structure of the website is simple, easy to follow for every user, from the nav bar or from the footer.
+When developing the website, I have put myself in the shoes of the visitor, and organized the page, so it can be easy to reach.
 
-`python3 -m http.server`
+### **User Stories:**  
 
-A blue button should appear to click: _Make Public_,
+* As a **User** I can ...
+  * ... **click on the nav bar** so that I can **easily navigate to the page of interest**
+  * ... **I can click on the wine list** so that I can **view and download it**
+  * ... **I can click on the cocktail list** so that I can **view and download it**
+  * ... **I can click on the social link** so that I can **visit the restaurant social pages**
+  * ... **I can view reviews/testimonials** so that **I can read them**
 
-Another blue button should appear to click: _Open Browser_.
+* As a **User** I can't ...
+  * ... **submit and empty field in form** so that I can **validate the event**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* As a **Unregistered User** I can ...
+  * ... **register an account** so that I can **login and view/update/delete my bookings**
+  * ... **send a form** so that I can **send information with events to the restaurant**
 
-A blue button should appear to click: _Make Public_,
+* As a **Registered User** I can ...
+  * ... **view booking** so that I can **update them with new information**
+  * ... **view bookings** so that I can **cancel them**
 
-Another blue button should appear to click: _Open Browser_.
+* As a **Admin** I can ...
+  * ... **view/edit/delete bookings** so that I can **manage them**
+  * ... **block registered users capability to double book** so that I can **block him from booking the same date twice**
+  * ... **send email on sending form** so that I can **confirm that the email has been received**
+  * ... **send email on accepting booking** so that I can **inform user that the reservation request has been approved**
+  * ... **send email on cancelation** so that I can **inform the user that the booking has been canceled**
+  * ... **filter and search all custom models from the admin page** so that I can **utilize the admin page to review, edit and delete data quickly**
+  * ... **add allergens to the dish when I create a course** so that I can **inform the customer about what it contains**
+  * ... **I can block the ability of the user to choose a date earlier than tomorrow** so that I can **send corect data to the restaurant**
+  * ... **I can add the option to confirm the action** so that I can **be sure that the user is aware of the form**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* As a **developer** I can ...
+  * ... **make the website responsive on all devices** so that I can **give the user a better experience**
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## **Backbone**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### **Wireframes:
+**Landing page:**
+------------------
+<img width="873" alt="Screenshot 2022-07-06 at 22 06 07" src="https://user-images.githubusercontent.com/91877102/177634548-bd35ada6-50b3-4d8f-8c2e-bc2405f76906.png">
 
-------
+**Gallery page:**
+------------------
+<img width="737" alt="Screenshot 2022-07-06 at 22 11 27" src="https://user-images.githubusercontent.com/91877102/177634735-700cfc7a-d694-48c9-9643-c9f86a23924c.png">
 
-## Release History
+**Menu page:**
+------------------
+<img width="895" alt="Screenshot 2022-07-06 at 22 12 24" src="https://user-images.githubusercontent.com/91877102/177634887-3c97b39e-4bf3-40a4-b392-98ef5231b8bb.png">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Meet the team page:**
+------------------
+<img width="927" alt="Screenshot 2022-07-06 at 22 13 15" src="https://user-images.githubusercontent.com/91877102/177635014-8855a23d-01ac-4f86-8eb0-15353c6cc7eb.png">
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Events page:**
+------------------
+<img width="749" alt="Screenshot 2022-07-06 at 22 13 54" src="https://user-images.githubusercontent.com/91877102/177635107-2e1e49b7-3623-4d26-bbae-327597731d17.png">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+**Login page:**
+------------------
+<img width="762" alt="Screenshot 2022-07-06 at 22 14 31" src="https://user-images.githubusercontent.com/91877102/177635186-76f67339-3b15-4fa6-97a5-d6b61acc0546.png">
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Color scheme:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+I wanted to keep the color scheme as simple as possible, because it has a lot of food pictures, that I want to showcase.
+The more vibrant color I don't consider that will add value, and will take away from the objective of the restaurant, that is food.
+I have used for reference the website: [coolers.co](https://coolors.co)
+In the end I have used the following colors
+ - #ffffff (white)
+ - #f8f9fa (gray) - footer
+ - 000000 (black)
+ - #827770 (brown) - nav bar
+------------------
+![Screenshot 2022-07-06 at 22 21 17](https://user-images.githubusercontent.com/91877102/177636535-a9507e72-f394-4d3b-89be-968fc485e964.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Typography:
+I have user only one font Zen Loop (uppercase) because it provided the Art Deco look that I wanted to achieve.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Agile Development Process
+I have use GitHub to keep track of my progress.
+All of the user stories have been logged on **Github** here:(https://github.com/GeorgianF/Grace-P4-CI/projects/1)
