@@ -337,6 +337,31 @@ I have included details of my initial deployment in a separate document called [
   * All icons throughout the page.
 
 
+# Credits
+* Balsamiq was used to create the wireframes.
+* The site was developed using Gitpod.
+* GitHub was used to store my repository, and it can be found here: https://github.com/GeorgianF/Grace-P4-CI
+* Guidance on file structure for templates folder from [learndjango.com article](https://learndjango.com/tutorials/template-structure)
+* [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000) was used to generate the basic color scheme
+* [W3cschool](https://www.w3schools.com/howto/howto_css_timeline.asp) was used to source the majority of the code
+* Fonts were taken from [Google Fonts](https://fonts.google.com/)
+* Images:
+  * Hero images taken from [Great British Chefs](https://www.greatbritishchefs.com/) 
+  * Logo was taken from Google Images
+* Multiple videos sourced from youtube were used to research a variety of topics:
+  * Animation for navication: https://www.youtube.com/watch?v=dIyVTjJAkLw
+  * Responsive Grid Image Gallery: https://www.youtube.com/watch?v=gvPyJ0rc944&list=WL&index=6
+* Datepicker, was added from this page: // https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html
+* Set timeout for the Dkango messages alert: // https://github.com/studygyaan/Django-CRM-Project
+
+* General references:
+    * [Geeks for Geeks](https://www.geeksforgeeks.org/)
+    * [Stack Overflow](https://stackoverflow.com/)
+    * [Code Institute Learning Platform](https://codeinstitute.net/)
+    * [Django Documentation](https://docs.djangoproject.com/en/4.0/)
+    * [Bootstrap Documentation](https://getbootstrap.com/)
+    * [Jinja Template Documentation](https://jinja.palletsprojects.com/)
+
 
 
 
