@@ -185,6 +185,12 @@ a.btn-index:hover::before {
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+#hero-image-index {
+    height: 500px;
+    width: 500px;
 }
 
 /* ----- OUR RESTAURANT ----- */
