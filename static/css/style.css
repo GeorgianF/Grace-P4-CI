@@ -750,7 +750,7 @@ input:focus{
 
 #reservation-table {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-bottom: 0 auto;
+    margin: 0 auto;
     font-size: 20px;
     padding: 25px;
     border: 1px solid black;
