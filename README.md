@@ -99,8 +99,8 @@ When developing the website, I have put myself in the shoes of the visitor, and 
 
 ### Color scheme:
 
-I wanted to keep the color scheme as simple as possible, because it has a lot of food pictures, that I want to showcase.
-The more vibrant color I don't consider that will add value, and will take away from the objective of the restaurant, that is food.
+I wanted to keep the color scheme as simple as possible, because within the website a lot of food picturescan be found, that I want to showcase.
+The more vibrant colors I did't consider that will add value, and will take away from the objective of the restaurant, that is food.
 I have used for reference the website: [coolers.co](https://coolors.co)
 In the end I have used the following colors
  - #ffffff (white)
@@ -116,3 +116,230 @@ I have user only one font Zen Loop (uppercase) because it provided the Art Deco 
 ## Agile Development Process
 I have use GitHub to keep track of my progress.
 All of the user stories have been logged on **Github** here:(https://github.com/GeorgianF/Grace-P4-CI/projects/1)
+
+
+# **Features**
+
+## **Site Navigation**
+
+### **Navbar**
+The menu it's hidden from the view and it can be found by clicking the hamburger menu on the right side of the screen
+Once the button is clicked, the menu will appear
+
+<img width="339" alt="Screenshot 2022-07-10 at 10 29 48" src="https://user-images.githubusercontent.com/91877102/178135536-1865c859-9625-43e4-830c-ef711e0cd6c7.png">
+
+The user has full freedom on the page that he wants to visit, and everything is easy to reach.
+
+### **Home page**
+The user is greeted with the logo of the restaurant, a motto and the main call to action button, to book table.
+<img width="693" alt="Screenshot 2022-07-10 at 10 32 59" src="https://user-images.githubusercontent.com/91877102/178135592-605e4f7d-e5c1-4c0d-998f-b2d11b2d5d49.png">
+
+The footer is hidden under the first view.
+<img width="1432" alt="Screenshot 2022-07-10 at 10 36 04" src="https://user-images.githubusercontent.com/91877102/178135684-4d56c9d6-0bb7-4d72-983c-9f763d5614f3.png">
+
+### **Our Restaurant page**
+The user will be greeted with a hero image, that contains one of the dishes from the restaurant - to let the user know what to expect after the booking process is complete. This page will provide information on the restaurant and the same call to action button to Book a Table can be found here.
+
+<img width="1424" alt="Screenshot 2022-07-10 at 10 38 10" src="https://user-images.githubusercontent.com/91877102/178135859-853db445-527c-43ad-9364-4c065cf6097b.png">
+
+At the next section of the page, can be found 3 previous clients testiomonials.
+
+<img width="1098" alt="Screenshot 2022-07-10 at 10 41 38" src="https://user-images.githubusercontent.com/91877102/178135863-4e6eef8b-02dc-46c1-b7b3-034a62d7ca95.png">
+
+At the next sections of the page, can be found some general guidelines against the spread of the corona virus:
+<img width="1161" alt="Screenshot 2022-07-10 at 10 43 19" src="https://user-images.githubusercontent.com/91877102/178135933-589ab010-5539-4e2f-ac85-af316d55fb05.png">
+
+### **Menu page**
+On this page the user can find information about the menu with the 6 options available:
+- Starters
+- Soups
+- Salads
+- Fish courses
+- Main courses
+- Desserts
+
+<img width="1423" alt="Screenshot 2022-07-10 at 10 46 14" src="https://user-images.githubusercontent.com/91877102/178136133-f5d34575-65ca-4061-a1ee-cceb98e69879.png">
+<img width="1411" alt="Screenshot 2022-07-10 at 10 46 24" src="https://user-images.githubusercontent.com/91877102/178136140-d9f32aa3-c7bd-4f66-afc3-af232f532cff.png">
+
+Each category is presented as a card, that the user can click an flip it over. The card will show the dishes presente in that category and their prices.
+The card flips back automaticaly after 10 seconds.
+
+<img width="476" alt="Screenshot 2022-07-10 at 10 51 16" src="https://user-images.githubusercontent.com/91877102/178136155-744c5572-e2d4-48ba-a4ed-f3cc5db4b8a9.png">
+
+At the bottom of the page, the user can also download a PDF file with the wine and cocktail list. To provide a full experience.
+
+<img width="576" alt="Screenshot 2022-07-10 at 10 46 30" src="https://user-images.githubusercontent.com/91877102/178136190-a8624546-5294-4743-8572-13281ca973af.png">
+
+### **Gallery page**
+As the name implies, this a gallery of artistic representation of the dishes that the restaurant has produced in the past.
+The images are presented in a grip system, random layout.
+Each images has a animation added to it, whenever the user hovers on of the image, it will scale up and the name of the dish will appear from the bottom up, to the middle of the image.
+
+<img width="1400" alt="Screenshot 2022-07-10 at 11 01 14" src="https://user-images.githubusercontent.com/91877102/178136464-0062a2c1-edc3-4e35-8380-02e5443e1287.png">
+
+### **Team page**
+
+On this page, the user can find information on the Executive Chef, on the kitchen team, the Sommelier, an the service team
+
+<img width="506" alt="Screenshot 2022-07-10 at 11 02 23" src="https://user-images.githubusercontent.com/91877102/178136506-0b6a4b0a-b6f0-48bc-b850-1c21cd5b688c.png">
+
+
+### **FAQ page**
+
+On this page, the can find frequently asked questions and their answer.
+It's based on Bootstrap
+
+<img width="1352" alt="Screenshot 2022-07-10 at 11 04 13" src="https://user-images.githubusercontent.com/91877102/178136626-1ce66078-74b9-4fda-bcb1-d2668f6089c2.png">
+
+Whenever the user clicks on one question, the answer will appear underneath and the main question will be highlighted with a blue color.
+Also the arrow has a animation, to rotate 180deg.
+
+<img width="1357" alt="Screenshot 2022-07-10 at 11 10 11" src="https://user-images.githubusercontent.com/91877102/178136733-dbd78ce9-8a1b-4441-932e-094da92ec19e.png">
+
+### **Events page**
+On this page can submit a form to the restaurant in regard to a event reservation.
+The user is not allowed to make a booking if the group is bigger than six, therefore he will have to submit a event request.
+
+The information requested are:
+- Email
+- First Name
+- Last Name
+- Phone number
+- Event date
+- Event details
+
+All fileds are mandatory.
+
+<img width="487" alt="Screenshot 2022-07-10 at 11 10 49" src="https://user-images.githubusercontent.com/91877102/178137135-9cd93261-c742-4866-a37d-7e990fa87f21.png">
+
+Once all the fields are complete with the details, the user is requested to confirm the request via a modal.
+
+<img width="397" alt="Screenshot 2022-07-10 at 11 28 19" src="https://user-images.githubusercontent.com/91877102/178137340-76bdc590-9b93-4f69-823b-bdddfced78f4.png">
+
+### **Login page**
+
+On this page the user can authentificate of sign-up with a new account
+
+<img width="382" alt="Screenshot 2022-07-10 at 11 30 40" src="https://user-images.githubusercontent.com/91877102/178137447-28def67d-ffa0-45af-b5bb-df61f95b8223.png">
+
+In case the user does not have an account, it will have the option to create a new one, by selecting the sign up button
+
+<img width="377" alt="Screenshot 2022-07-10 at 11 31 45" src="https://user-images.githubusercontent.com/91877102/178137469-9e8c8a0a-69a1-4817-88b0-9e9ce61705ee.png">
+
+Once the user is logged in, he will notified via a message alert on top of the page
+
+<img width="333" alt="Screenshot 2022-07-10 at 11 32 05" src="https://user-images.githubusercontent.com/91877102/178137518-30dc6c30-9296-4ff8-8d14-275ac57fad0e.png">
+
+
+### **Sign-up page**
+
+On this page the user can register for a account, it will be required:
+- Username
+- Email(optional)
+- Password
+
+<img width="392" alt="Screenshot 2022-07-10 at 12 05 22" src="https://user-images.githubusercontent.com/91877102/178138521-9956f80d-0b53-44a2-85f4-40f9a046d389.png">
+
+
+The page is based on the standard AllAuth pages from Django.
+If the user is taken, he will be notified:
+
+<img width="312" alt="Screenshot 2022-07-10 at 12 04 06" src="https://user-images.githubusercontent.com/91877102/178138536-0524c842-0d30-4e55-a3f3-43fb434422dc.png">
+
+
+### **Reservation page**
+
+If user is not authentificated it will redirected to the page to sign-in, with the option to sign-up.
+If user is authentificated, he will see that the menu will change to reflect the fact he is authentificated.
+
+<img width="234" alt="Screenshot 2022-07-10 at 11 39 50" src="https://user-images.githubusercontent.com/91877102/178137680-3d5a3689-3560-4751-add5-e4c404e828c7.png">
+
+Once the button View Reservation from the navigation bar is click , the user will be redirected to the page to create a booking, via a form:
+
+<img width="549" alt="Screenshot 2022-07-10 at 11 41 08" src="https://user-images.githubusercontent.com/91877102/178137725-640a0937-8690-43ec-906e-2923684980e3.png">
+
+All fields are mandatory, and the PERSONS box has a restriction of number between 1 and 6.
+If the group is bigger than six, the user will need to use the event form.
+At the bottom of the form the user has the option to submit, reset or be redirect to the booking page
+
+
+### **View booking page**
+
+Here the user can view all the reservations that have been made, and are still active.
+The user can view only the reservation that belongs to his name, the rest will be viewed as Anonymus.
+
+<img width="579" alt="Screenshot 2022-07-10 at 11 47 52" src="https://user-images.githubusercontent.com/91877102/178138005-f507e89e-9930-4279-892a-1c40b573cd8e.png">
+
+The reservation done under the name of the username will have 2 button available: Update and Delete
+If the reservation is not under his name, he will, not have the option to modify or delete it.
+
+The admin, can view all the reservations
+
+<img width="576" alt="Screenshot 2022-07-10 at 11 50 57" src="https://user-images.githubusercontent.com/91877102/178138033-362ca3a9-7350-4f39-98e6-a12f17682ab8.png">
+
+If the user clicks on the Update reservation, he will be redirected to the update reserrvation page
+If the user clicks on the Delete reservation, he will need to confirm the deletion
+
+<img width="398" alt="Screenshot 2022-07-10 at 12 01 23" src="https://user-images.githubusercontent.com/91877102/178138335-d925a3df-2056-4fa2-a7db-110b32059c5b.png">
+
+
+### **Update reservation page**
+
+Once the user clicks on the button to update the reservation, all the data will be pulled from the database and the user has complete freedom to change it as he wants.
+Once done he will need to confirm the change
+
+<img width="398" alt="Screenshot 2022-07-10 at 11 58 21" src="https://user-images.githubusercontent.com/91877102/178138223-2ec23d9a-d36f-4dae-9f52-5905276cad77.png">
+
+He will be notified with a message, that the change has been succesfull noted in the system.
+
+<img width="398" alt="Screenshot 2022-07-10 at 11 59 13" src="https://user-images.githubusercontent.com/91877102/178138241-43e695b6-5d78-4099-be84-071faa62b7ac.png">
+
+He will be notified with a message, that the change has been succesfull noted in the system.
+
+
+### **COOKBOOKS (COMING SOON) page**
+
+The page is disabled, and it's future enhancement that can be added to the website
+
+### **GIFTS (COMING SOON) page**
+
+The page is disabled, and it's future enhancement that can be added to the website
+
+
+# **Testing Phase**
+I have included testing details during and post-development in a separate document called [testing.md](testing.md).
+
+
+# **Deployment**
+The final Deployed site can be found [here](https://grace-restaurant-p4-ci.herokuapp.com/)
+I have included details of my initial deployment in a separate document called [deployment.md](deployment.md).
+
+
+# **Technologies used**
+* Python
+  * The packages installed for the is project can be found in [the requirements.txt](requirements.txt)
+* Django
+  * Django was used as the python framework in the project.
+  * Django all auth was used to handle user authentication and related tasks i.e. sign in, sign up, sign out.
+* Heroku
+  * Used to deploy the page and make it publicly available.
+* Heroku PostgreSQL
+  * Used for the database during development and in deployment.
+* HTML
+  * HTML was the base language used to layout the skeleton of all templates.
+* CSS
+  * Custom CSS used to style the page.
+* Javascript and JQuery
+  * I have used Javascript and JQuery to manipulate the DOM.
+* Bootstrap 5.2.0
+  * Used to style HTML, CSS, minor javascript tasks. 
+* Font awesome
+  * All icons throughout the page.
+
+
+
+
+
+
+
+
