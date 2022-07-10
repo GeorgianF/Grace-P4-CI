@@ -307,12 +307,12 @@ The page is disabled, and it's future enhancement that can be added to the websi
 
 
 # **Testing Phase**
-I have included testing details during and post-development in a separate document called [testing.md](testing.md).
+I have included testing details during and post-development in a separate document called [TESTING.md](TESTING.md).
 
 
 # **Deployment**
 The final Deployed site can be found [here](https://grace-restaurant-p4-ci.herokuapp.com/)
-I have included details of my initial deployment in a separate document called [deployment.md](deployment.md).
+I have included details of my initial deployment in a separate document called [DEPLOYMENT.md](DEPLOYMENT.md).
 
 
 # **Technologies used**
