@@ -1,108 +1,345 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Grace Restaurant**
+The restaurant is a fine dining restaurant located in the heart of Chicago. 
+The restaurant overlooks Cloud Gate, one of the most beautiful landmarks in Chicago. 
+Located here since 1998, it underwent a full-scale renovation and redesign in the summer of 2017.
 
-Welcome GeorgianF,
+[Deployed site](https://grace-restaurant-p4-ci.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# **Planning Phase**
+## **Site Objectives:**
+The restaurant wants to inform the visitors about a sustainable approach on food, with zero waste policy.
+It's actively involved in local comunities and has the mission to reduce the carbon footprint.
+It's using local source products, and presents them to the customer in a fine dining manner.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Feasibility study
 
-## Gitpod Reminders
+Grace Restaurant | Importance | Feasibility
+---|---|---
+User can make reservations | 5 | 5
+User can cancel reservations | 5 | 5
+User can update reservations | 5 | 5
+User profile | 5 | 5
+User log in | 5 | 5
+Landing page simple and a clear message | 5 | 5
+Manually add reservations (admin) | 5 | 5
+Event form  | 5 | 5
+View menu | 4 | 5 
+Know the team | 2 | 3
+Testimonials | 2 | 2 
+Being able to download wine and cocktail lists | 2 | 1 
+----------------------------------------|----|----
+Totals | 50 | 51
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## **Structure**   
+The structure of the website is simple, easy to follow for every user, from the nav bar or from the footer.
+When developing the website, I have put myself in the shoes of the visitor, and organized the page, so it can be easy to reach.
 
-`python3 -m http.server`
+### **User Stories:**  
 
-A blue button should appear to click: _Make Public_,
+* As a **User** I can ...
+  * ... **click on the nav bar** so that I can **easily navigate to the page of interest**
+  * ... **I can click on the wine list** so that I can **view and download it**
+  * ... **I can click on the cocktail list** so that I can **view and download it**
+  * ... **I can click on the social link** so that I can **visit the restaurant social pages**
+  * ... **I can view reviews/testimonials** so that **I can read them**
 
-Another blue button should appear to click: _Open Browser_.
+* As a **User** I can't ...
+  * ... **submit and empty field in form** so that I can **validate the event**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* As a **Unregistered User** I can ...
+  * ... **register an account** so that I can **login and view/update/delete my bookings**
+  * ... **send a form** so that I can **send information with events to the restaurant**
 
-A blue button should appear to click: _Make Public_,
+* As a **Registered User** I can ...
+  * ... **view booking** so that I can **update them with new information**
+  * ... **view bookings** so that I can **cancel them**
 
-Another blue button should appear to click: _Open Browser_.
+* As a **Admin** I can ...
+  * ... **view/edit/delete bookings** so that I can **manage them**
+  * ... **block registered users capability to double book** so that I can **block him from booking the same date twice**
+  * ... **send email on sending form** so that I can **confirm that the email has been received**
+  * ... **send email on accepting booking** so that I can **inform user that the reservation request has been approved**
+  * ... **send email on cancelation** so that I can **inform the user that the booking has been canceled**
+  * ... **filter and search all custom models from the admin page** so that I can **utilize the admin page to review, edit and delete data quickly**
+  * ... **add allergens to the dish when I create a course** so that I can **inform the customer about what it contains**
+  * ... **I can block the ability of the user to choose a date earlier than tomorrow** so that I can **send corect data to the restaurant**
+  * ... **I can add the option to confirm the action** so that I can **be sure that the user is aware of the form**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* As a **developer** I can ...
+  * ... **make the website responsive on all devices** so that I can **give the user a better experience**
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## **Backbone**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### **Wireframes:
+**Landing page:**
+------------------
+<img width="873" alt="Screenshot 2022-07-06 at 22 06 07" src="https://user-images.githubusercontent.com/91877102/177634548-bd35ada6-50b3-4d8f-8c2e-bc2405f76906.png">
 
-------
+**Gallery page:**
+------------------
+<img width="737" alt="Screenshot 2022-07-06 at 22 11 27" src="https://user-images.githubusercontent.com/91877102/177634735-700cfc7a-d694-48c9-9643-c9f86a23924c.png">
 
-## Release History
+**Menu page:**
+------------------
+<img width="895" alt="Screenshot 2022-07-06 at 22 12 24" src="https://user-images.githubusercontent.com/91877102/177634887-3c97b39e-4bf3-40a4-b392-98ef5231b8bb.png">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Meet the team page:**
+------------------
+<img width="927" alt="Screenshot 2022-07-06 at 22 13 15" src="https://user-images.githubusercontent.com/91877102/177635014-8855a23d-01ac-4f86-8eb0-15353c6cc7eb.png">
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Events page:**
+------------------
+<img width="749" alt="Screenshot 2022-07-06 at 22 13 54" src="https://user-images.githubusercontent.com/91877102/177635107-2e1e49b7-3623-4d26-bbae-327597731d17.png">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+**Login page:**
+------------------
+<img width="762" alt="Screenshot 2022-07-06 at 22 14 31" src="https://user-images.githubusercontent.com/91877102/177635186-76f67339-3b15-4fa6-97a5-d6b61acc0546.png">
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Color scheme:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+I wanted to keep the color scheme as simple as possible, because within the website a lot of food picturescan be found, that I want to showcase.
+The more vibrant colors I did't consider that will add value, and will take away from the objective of the restaurant, that is food.
+I have used for reference the website: [coolers.co](https://coolors.co)
+In the end I have used the following colors
+ - #ffffff (white)
+ - #f8f9fa (gray) - footer
+ - 000000 (black)
+ - #827770 (brown) - nav bar
+------------------
+![Screenshot 2022-07-06 at 22 21 17](https://user-images.githubusercontent.com/91877102/177636535-a9507e72-f394-4d3b-89be-968fc485e964.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Typography:
+I have user only one font Zen Loop (uppercase) because it provided the Art Deco look that I wanted to achieve.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Agile Development Process
+I have use GitHub to keep track of my progress.
+All of the user stories have been logged on **Github** here:(https://github.com/GeorgianF/Grace-P4-CI/projects/1)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# **Features**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## **Site Navigation**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### **Navbar**
+The menu it's hidden from the view and it can be found by clicking the hamburger menu on the right side of the screen
+Once the button is clicked, the menu will appear
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<img width="339" alt="Screenshot 2022-07-10 at 10 29 48" src="https://user-images.githubusercontent.com/91877102/178135536-1865c859-9625-43e4-830c-ef711e0cd6c7.png">
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+The user has full freedom on the page that he wants to visit, and everything is easy to reach.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### **Home page**
+The user is greeted with the logo of the restaurant, a motto and the main call to action button, to book table.
+<img width="693" alt="Screenshot 2022-07-10 at 10 32 59" src="https://user-images.githubusercontent.com/91877102/178135592-605e4f7d-e5c1-4c0d-998f-b2d11b2d5d49.png">
 
-------
+The footer is hidden under the first view.
+<img width="1432" alt="Screenshot 2022-07-10 at 10 36 04" src="https://user-images.githubusercontent.com/91877102/178135684-4d56c9d6-0bb7-4d72-983c-9f763d5614f3.png">
 
-## FAQ about the uptime script
+### **Our Restaurant page**
+The user will be greeted with a hero image, that contains one of the dishes from the restaurant - to let the user know what to expect after the booking process is complete. This page will provide information on the restaurant and the same call to action button to Book a Table can be found here.
 
-**Why have you added this script?**
+<img width="1424" alt="Screenshot 2022-07-10 at 10 38 10" src="https://user-images.githubusercontent.com/91877102/178135859-853db445-527c-43ad-9364-4c065cf6097b.png">
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+At the next section of the page, can be found 3 previous clients testiomonials.
 
-**How will this affect me?**
+<img width="1098" alt="Screenshot 2022-07-10 at 10 41 38" src="https://user-images.githubusercontent.com/91877102/178135863-4e6eef8b-02dc-46c1-b7b3-034a62d7ca95.png">
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+At the next sections of the page, can be found some general guidelines against the spread of the corona virus:
+<img width="1161" alt="Screenshot 2022-07-10 at 10 43 19" src="https://user-images.githubusercontent.com/91877102/178135933-589ab010-5539-4e2f-ac85-af316d55fb05.png">
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### **Menu page**
+On this page the user can find information about the menu with the 6 options available:
+- Starters
+- Soups
+- Salads
+- Fish courses
+- Main courses
+- Desserts
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<img width="1423" alt="Screenshot 2022-07-10 at 10 46 14" src="https://user-images.githubusercontent.com/91877102/178136133-f5d34575-65ca-4061-a1ee-cceb98e69879.png">
+<img width="1411" alt="Screenshot 2022-07-10 at 10 46 24" src="https://user-images.githubusercontent.com/91877102/178136140-d9f32aa3-c7bd-4f66-afc3-af232f532cff.png">
 
-**So….?**
+Each category is presented as a card, that the user can click an flip it over. The card will show the dishes presente in that category and their prices.
+The card flips back automaticaly after 10 seconds.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<img width="476" alt="Screenshot 2022-07-10 at 10 51 16" src="https://user-images.githubusercontent.com/91877102/178136155-744c5572-e2d4-48ba-a4ed-f3cc5db4b8a9.png">
 
-**Can I opt out?**
+At the bottom of the page, the user can also download a PDF file with the wine and cocktail list. To provide a full experience.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<img width="576" alt="Screenshot 2022-07-10 at 10 46 30" src="https://user-images.githubusercontent.com/91877102/178136190-a8624546-5294-4743-8572-13281ca973af.png">
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### **Gallery page**
+As the name implies, this a gallery of artistic representation of the dishes that the restaurant has produced in the past.
+The images are presented in a grip system, random layout.
+Each images has a animation added to it, whenever the user hovers on of the image, it will scale up and the name of the dish will appear from the bottom up, to the middle of the image.
 
-**Anything more?**
+<img width="1400" alt="Screenshot 2022-07-10 at 11 01 14" src="https://user-images.githubusercontent.com/91877102/178136464-0062a2c1-edc3-4e35-8380-02e5443e1287.png">
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### **Team page**
 
----
+On this page, the user can find information on the Executive Chef, on the kitchen team, the Sommelier, an the service team
 
-Happy coding!
+<img width="506" alt="Screenshot 2022-07-10 at 11 02 23" src="https://user-images.githubusercontent.com/91877102/178136506-0b6a4b0a-b6f0-48bc-b850-1c21cd5b688c.png">
+
+
+### **FAQ page**
+
+On this page, the can find frequently asked questions and their answer.
+It's based on Bootstrap
+
+<img width="1352" alt="Screenshot 2022-07-10 at 11 04 13" src="https://user-images.githubusercontent.com/91877102/178136626-1ce66078-74b9-4fda-bcb1-d2668f6089c2.png">
+
+Whenever the user clicks on one question, the answer will appear underneath and the main question will be highlighted with a blue color.
+Also the arrow has a animation, to rotate 180deg.
+
+<img width="1357" alt="Screenshot 2022-07-10 at 11 10 11" src="https://user-images.githubusercontent.com/91877102/178136733-dbd78ce9-8a1b-4441-932e-094da92ec19e.png">
+
+### **Events page**
+On this page can submit a form to the restaurant in regard to a event reservation.
+The user is not allowed to make a booking if the group is bigger than six, therefore he will have to submit a event request.
+
+The information requested are:
+- Email
+- First Name
+- Last Name
+- Phone number
+- Event date
+- Event details
+
+All fileds are mandatory.
+
+<img width="487" alt="Screenshot 2022-07-10 at 11 10 49" src="https://user-images.githubusercontent.com/91877102/178137135-9cd93261-c742-4866-a37d-7e990fa87f21.png">
+
+Once all the fields are complete with the details, the user is requested to confirm the request via a modal.
+
+<img width="397" alt="Screenshot 2022-07-10 at 11 28 19" src="https://user-images.githubusercontent.com/91877102/178137340-76bdc590-9b93-4f69-823b-bdddfced78f4.png">
+
+### **Login page**
+
+On this page the user can authentificate of sign-up with a new account
+
+<img width="382" alt="Screenshot 2022-07-10 at 11 30 40" src="https://user-images.githubusercontent.com/91877102/178137447-28def67d-ffa0-45af-b5bb-df61f95b8223.png">
+
+In case the user does not have an account, it will have the option to create a new one, by selecting the sign up button
+
+<img width="377" alt="Screenshot 2022-07-10 at 11 31 45" src="https://user-images.githubusercontent.com/91877102/178137469-9e8c8a0a-69a1-4817-88b0-9e9ce61705ee.png">
+
+Once the user is logged in, he will notified via a message alert on top of the page
+
+<img width="333" alt="Screenshot 2022-07-10 at 11 32 05" src="https://user-images.githubusercontent.com/91877102/178137518-30dc6c30-9296-4ff8-8d14-275ac57fad0e.png">
+
+
+### **Sign-up page**
+
+On this page the user can register for a account, it will be required:
+- Username
+- Email(optional)
+- Password
+
+<img width="392" alt="Screenshot 2022-07-10 at 12 05 22" src="https://user-images.githubusercontent.com/91877102/178138521-9956f80d-0b53-44a2-85f4-40f9a046d389.png">
+
+
+The page is based on the standard AllAuth pages from Django.
+If the user is taken, he will be notified:
+
+<img width="312" alt="Screenshot 2022-07-10 at 12 04 06" src="https://user-images.githubusercontent.com/91877102/178138536-0524c842-0d30-4e55-a3f3-43fb434422dc.png">
+
+
+### **Reservation page**
+
+If user is not authentificated it will redirected to the page to sign-in, with the option to sign-up.
+If user is authentificated, he will see that the menu will change to reflect the fact he is authentificated.
+
+<img width="234" alt="Screenshot 2022-07-10 at 11 39 50" src="https://user-images.githubusercontent.com/91877102/178137680-3d5a3689-3560-4751-add5-e4c404e828c7.png">
+
+Once the button View Reservation from the navigation bar is click , the user will be redirected to the page to create a booking, via a form:
+
+<img width="549" alt="Screenshot 2022-07-10 at 11 41 08" src="https://user-images.githubusercontent.com/91877102/178137725-640a0937-8690-43ec-906e-2923684980e3.png">
+
+All fields are mandatory, and the PERSONS box has a restriction of number between 1 and 6.
+If the group is bigger than six, the user will need to use the event form.
+At the bottom of the form the user has the option to submit, reset or be redirect to the booking page
+
+
+### **View booking page**
+
+Here the user can view all the reservations that have been made, and are still active.
+The user can view only the reservation that belongs to his name, the rest will be viewed as Anonymus.
+
+<img width="579" alt="Screenshot 2022-07-10 at 11 47 52" src="https://user-images.githubusercontent.com/91877102/178138005-f507e89e-9930-4279-892a-1c40b573cd8e.png">
+
+The reservation done under the name of the username will have 2 button available: Update and Delete
+If the reservation is not under his name, he will, not have the option to modify or delete it.
+
+The admin, can view all the reservations
+
+<img width="576" alt="Screenshot 2022-07-10 at 11 50 57" src="https://user-images.githubusercontent.com/91877102/178138033-362ca3a9-7350-4f39-98e6-a12f17682ab8.png">
+
+If the user clicks on the Update reservation, he will be redirected to the update reserrvation page
+If the user clicks on the Delete reservation, he will need to confirm the deletion
+
+<img width="398" alt="Screenshot 2022-07-10 at 12 01 23" src="https://user-images.githubusercontent.com/91877102/178138335-d925a3df-2056-4fa2-a7db-110b32059c5b.png">
+
+
+### **Update reservation page**
+
+Once the user clicks on the button to update the reservation, all the data will be pulled from the database and the user has complete freedom to change it as he wants.
+Once done he will need to confirm the change
+
+<img width="398" alt="Screenshot 2022-07-10 at 11 58 21" src="https://user-images.githubusercontent.com/91877102/178138223-2ec23d9a-d36f-4dae-9f52-5905276cad77.png">
+
+He will be notified with a message, that the change has been succesfull noted in the system.
+
+<img width="398" alt="Screenshot 2022-07-10 at 11 59 13" src="https://user-images.githubusercontent.com/91877102/178138241-43e695b6-5d78-4099-be84-071faa62b7ac.png">
+
+He will be notified with a message, that the change has been succesfull noted in the system.
+
+
+### **COOKBOOKS (COMING SOON) page**
+
+The page is disabled, and it's future enhancement that can be added to the website
+
+### **GIFTS (COMING SOON) page**
+
+The page is disabled, and it's future enhancement that can be added to the website
+
+
+# **Testing Phase**
+I have included testing details during and post-development in a separate document called [testing.md](testing.md).
+
+
+# **Deployment**
+The final Deployed site can be found [here](https://grace-restaurant-p4-ci.herokuapp.com/)
+I have included details of my initial deployment in a separate document called [deployment.md](deployment.md).
+
+
+# **Technologies used**
+* Python
+  * The packages installed for the is project can be found in [the requirements.txt](requirements.txt)
+* Django
+  * Django was used as the python framework in the project.
+  * Django all auth was used to handle user authentication and related tasks i.e. sign in, sign up, sign out.
+* Heroku
+  * Used to deploy the page and make it publicly available.
+* Heroku PostgreSQL
+  * Used for the database during development and in deployment.
+* HTML
+  * HTML was the base language used to layout the skeleton of all templates.
+* CSS
+  * Custom CSS used to style the page.
+* Javascript and JQuery
+  * I have used Javascript and JQuery to manipulate the DOM.
+* Bootstrap 5.2.0
+  * Used to style HTML, CSS, minor javascript tasks. 
+* Font awesome
+  * All icons throughout the page.
+
+
+
+
+
+
+
+
