@@ -1,4 +1,5 @@
-from django.test import TestCase
+from django.test import TestCase, Client
+from .models import Booking
 
 
 # Create your tests here.
@@ -47,9 +48,22 @@ class TestViews(TestCase):
         response = self.client.post('/booking/', )
         self.assertRedirects(response, '/accounts/login/?next=/booking/')
 
-    # def test_can_delete_reservation(self):
-    #     booking = Booking.objects.create(booking_name=" ")
-    #     response = self.client.get(f'/delete/{booking.id}')
-    #     self.assertRedirects(response, '/')
-    #     existing_items = Booking.objects.filter(id=booking.id)
-    #     self.assertEqual(len(existing_items), 0)
+    def test_can_delete_reservation(self):
+        user_login = self.client.post('/login/', {
+            'username': 'test_client',
+            'password': 'somepassword'
+            })
+        self.assertEqual = (user_login.status_code, 200)
+        
+        # booking = Booking.objects.create(
+        #     user=Client(),
+        #     booking_name="Test",
+        #     date="2022-08-22",
+        #     booking_details="some details",
+        #     arrival_time="17:00",
+        #     number_of_persons="2",
+        #     allergies="No Allergies"
+        # )
+        # booking_response=self.client.get(f'/delete_booking/{booking_id}')
+        
+        
