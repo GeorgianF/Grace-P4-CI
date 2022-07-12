@@ -43,10 +43,10 @@ $(function () {
   tomorrow.setDate(today.getDate() + 1);
   $("#datepicker, #datepicker1").datepicker({
     format: 'dd/mm/yyyy',
-    startDate : today,
+    startDate : tomorrow,
     filter: function(date) {
       if (date.getDay() == 0) {
-        return false; // Disable all Sundays, but still leave months/years, whose first day is a Sunday, enabled.
+        return false; // Disable all Sundays.
       }
     }
     });
