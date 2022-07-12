@@ -3,6 +3,7 @@
 ## **Validators**
 
 ### **W3 Validor @ https://validator.w3.org/**
+------------
 
 To able to succesfully test all the pages for errors I had to change the jinja templating language from the html, for example {% url 'booking' %} had to change it to "#". Otherwise it would throw an error an unrecognized format.
 
@@ -18,6 +19,7 @@ After all the modification have been done, to show a basic html document, I got 
 <img width="1388" alt="Screenshot 2022-07-10 at 14 58 57" src="https://user-images.githubusercontent.com/91877102/178143940-cbf97cab-985a-4ec9-88d6-ab4752fd7356.png">
 
 ### **PEP8 online** @ http://pep8online.com/
+------------
 
 - **forms.py**
 
@@ -54,10 +56,30 @@ After all the modification have been done, to show a basic html document, I got 
 
 
 ### **JS Validor** @ [https://validator.w3.org/](https://jshint.com/)
+------------
 
 No errors:
 
 <img width="988" alt="Screenshot 2022-07-10 at 15 17 48" src="https://user-images.githubusercontent.com/91877102/178144709-26969838-6a25-41e3-b8cc-5375088b799f.png">
 
 
+### **Lighthouse** @ Google Chrome Dev Tools.
+------------
+#### **Home page**
+
+<img width="481" alt="Screenshot 2022-07-12 at 22 11 25" src="https://user-images.githubusercontent.com/91877102/178575488-62d7175e-d6cd-4cb4-8529-da543e720a2f.png">
+
+Low score on Best Practice due to the JQuery library mandatory for the DatePicker
+
+<img width="498" alt="Screenshot 2022-07-12 at 22 14 21" src="https://user-images.githubusercontent.com/91877102/178575702-1a73f3b2-c196-4889-9447-6a29d41360f5.png">
+
+#### **Our Restaurant page**
+
+<img width="433" alt="Screenshot 2022-07-12 at 22 29 30" src="https://user-images.githubusercontent.com/91877102/178578252-bc37eb02-924e-4f14-a5e9-8e2ae9128ec8.png">
+
+#### **Reservation page redirected to login page page**
+
+<img width="443" alt="Screenshot 2022-07-12 at 22 31 34" src="https://user-images.githubusercontent.com/91877102/178578506-b0f19282-31a6-41ea-846f-c833a51a3860.png">
+
+#### **Menu page**
 
