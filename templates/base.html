@@ -2,28 +2,35 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mock project for Code Institute Full Stack project 4">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5ef8bf6f91.js" crossorigin="anonymous" defer></script>
-   
+
     <!-- DateTimePicker -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
-   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"
+        integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"
+        integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+
 
 
     <title>Grace | Restaurant </title>
 </head>
+
 <body>
     <!-- NAV BUTTON -->
     <!-- https://github.com/codeSTACKr/hamburger-animation -->
-   
+
     <div class="menu-btn">
         <div class="menu-btn__burger"></div>
     </div>
@@ -33,9 +40,9 @@
                 <li><a href="{% url 'home' %}">HOME</a></li>
                 <li><a href="{% url 'our-restaurant' %}">OUR RESTAURANT</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'update-booking' %}">VIEW RESERVATIONS</a></li>
+                <li><a href="{% url 'update-booking' %}">VIEW RESERVATIONS</a></li>
                 {% else %}
-                    <li><a href="{% url 'booking' %}">RESERVATIONS</a></li>
+                <li><a href="{% url 'booking' %}">RESERVATIONS</a></li>
                 {% endif %}
                 <li><a href="{% url 'menu' %}">MENU</a></li>
                 <li><a href="{% url 'gallery' %}">GALLERY</a></li>
@@ -45,9 +52,9 @@
                 <li><a href="{% url 'faq' %}">FAQ</a></li>
                 <li><a href="{% url 'events' %}">EVENTS</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'account_logout' %}">LOGOUT</a></li>
+                <li><a href="{% url 'account_logout' %}">LOGOUT</a></li>
                 {% else %}
-                    <li><a href="{% url 'account_login' %}">LOGIN / SIGN-UP</a></li>
+                <li><a href="{% url 'account_login' %}">LOGIN / SIGN-UP</a></li>
                 {% endif %}
             </ul>
         </nav>
@@ -56,139 +63,144 @@
     <div id="content">
         {% include 'messages.html' %}
     </div>
- 
-       {% block content %}
-       <!-- Content Goes here -->
-       {% endblock content %}
 
-       <!-- FOOTER -->
-       <footer class="text-center text-lg-start bg-light text-muted" id="footer">
-           <!-- Section: Social media -->
-           <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-               <!-- Left -->
-               <div class="me-5 d-none d-lg-block">
-                   <h4>Get connected with us on social networks:</h4>
-               </div>
-               <!-- Left -->
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
 
-               <!-- Right -->
-               <div id="social-icons">
-                <a href="https://www.facebook.com/" class="me-4 text-reset text-decoration-none" target="_blank" aria-label="Facebook">
-                  <i class="fab fa-facebook-f"></i>
+    <!-- FOOTER -->
+    <footer class="text-center text-lg-start bg-light text-muted" id="footer">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <h4>Get connected with us on social networks:</h4>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div id="social-icons">
+                <a href="https://www.facebook.com/" class="me-4 text-reset text-decoration-none" target="_blank"
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://twitter.com/?lang=en" class="me-4 text-reset text-decoration-none" target="_blank" aria-label="twitter">
-                  <i class="fab fa-twitter"></i>
+                <a href="https://twitter.com/?lang=en" class="me-4 text-reset text-decoration-none" target="_blank"
+                    aria-label="twitter">
+                    <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.google.ro/" class="me-4 text-reset text-decoration-none" target="_blank" aria-label="google">
-                  <i class="fab fa-google"></i>
+                <a href="https://www.google.ro/" class="me-4 text-reset text-decoration-none" target="_blank"
+                    aria-label="google">
+                    <i class="fab fa-google"></i>
                 </a>
-                <a href="https://www.instagram.com/?hl=en" class="me-4 text-reset text-decoration-none" target="_blank" aria-label="instagram">
-                  <i class="fab fa-instagram text-decoration-none"></i>
+                <a href="https://www.instagram.com/?hl=en" class="me-4 text-reset text-decoration-none" target="_blank"
+                    aria-label="instagram">
+                    <i class="fab fa-instagram text-decoration-none"></i>
                 </a>
                 <a href="https://www.linkedin.com/" class="me-4 text-reset text-decoration-none" aria-label="linkedin">
-                  <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/" class="github me-4 text-reset text-decoration-none" target="_blank" aria-label="linkedin">
-                  <i class="fab fa-github"></i>
+                <a href="https://github.com/" class="github me-4 text-reset text-decoration-none" target="_blank"
+                    aria-label="linkedin">
+                    <i class="fab fa-github"></i>
                 </a>
-              </div>
-               <!-- Right -->
-           </section>
-           <!-- Section: Social media -->
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
 
-           <!-- Section: Links  -->
-           <section>
-               <div class="container text-center text-md-start mt-5">
-                   <!-- Grid row -->
-                   <div class="row mt-3">
-                       <!-- Grid column -->
-                       <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                           <!-- Content -->
-                           <h4 class="text-uppercase fw-bold mb-4">
-                               <i class="fas fa-gem me-3"></i>Restaurant Grace
-                           </h4>
-                           <p>
-                               Grace is actively minimising it's impact on the planet, specifically by addressing issues
-                               like sustainable farming, carbon footprint, shortening our supply chain, food wastage,
-                               packaging, water and energy consumption,
-                               recycling, and more.
-                           </p>
-                       </div>
-                       <!-- Grid column -->
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Restaurant Grace
+                        </h4>
+                        <p>
+                            Grace is actively minimising it's impact on the planet, specifically by addressing issues
+                            like sustainable farming, carbon footprint, shortening our supply chain, food wastage,
+                            packaging, water and energy consumption,
+                            recycling, and more.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
 
-                       <!-- Grid column -->
-                       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                           <!-- Links -->
-                           <h5 class="text-uppercase fw-bold mb-4">
-                               Products
-                           </h5>
-                           <p>
-                               <a href="{% url 'events' %}" class="text-reset">Events</a>
-                           </p>
-                           <p>
-                               <a href="{% url 'booking' %}" class="text-reset">Book a Table</a>
-                           </p>
-                           <p>
-                               <a href="{% url 'gallery' %}" class="text-reset">Gallery</a>
-                           </p>
-                           <p>
-                               <a href="{% url 'menu' %}" class="text-reset">Menu</a>
-                           </p>
-                       </div>
-                       <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h5>
+                        <p>
+                            <a href="{% url 'events' %}" class="text-reset">Events</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'gallery' %}" class="text-reset">Gallery</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'menu' %}" class="text-reset">Menu</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
 
-                       <!-- Grid column -->
-                       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                           <!-- Links -->
-                           <h5 class="text-uppercase fw-bold mb-4">
-                               Useful links
-                           </h5>
-                           <p>
-                               <a href="{% url 'faq' %}" class="text-reset">FAQ</a>
-                           </p>
-                           <p>
-                               <a href="{% url 'team' %}" class="text-reset">Team</a>
-                           </p>
-                           <p>
-                               <a href="{{ signup_url }}" class="text-reset">Sign Up</a>
-                           </p>
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h5>
+                        <p>
+                            <a href="{% url 'faq' %}" class="text-reset">FAQ</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'team' %}" class="text-reset">Team</a>
+                        </p>
+                        <p>
+                            <a href="{% url 'booking' %}" class="text-reset">Book a Table</a>
+                        </p>
 
-                       </div>
-                       <!-- Grid column -->
+                    </div>
+                    <!-- Grid column -->
 
-                       <!-- Grid column -->
-                       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                           <!-- Links -->
-                           <h5 class="text-uppercase fw-bold mb-4">
-                               Contact
-                           </h5>
-                           <p><i class="fas fa-home me-3"></i> Chicago, IL 10012, US</p>
-                           <p>
-                               <i class="fas fa-envelope me-3"></i>
-                               info@grace-restaurant.com
-                           </p>
-                           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                           <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-                       </div>
-                       <!-- Grid column -->
-                   </div>
-                   <!-- Grid row -->
-               </div>
-           </section>
-           <!-- Section: Links  -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h5 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h5>
+                        <p><i class="fas fa-home me-3"></i> Chicago, IL 10012, US</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@grace-restaurant.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
 
-           <!-- Copyright -->
-           <div class="text-center p-4">
-               © 2022 Copyright:
-               <a class="text-reset" href="https://github.com/GeorgianF">Made with <i class="fas fa-heart"></i> by
-                   Georgian Furtuna</a>
-           </div>
-           <!-- Copyright -->
-       </footer>
-       <!-- Footer -->
+        <!-- Copyright -->
+        <div class="text-center p-4">
+            © 2022 Copyright:
+            <a class="text-reset" href="https://github.com/GeorgianF">Made with <i class="fas fa-heart"></i> by
+                Georgian Furtuna</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
 
-    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous">
+    </script>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>
