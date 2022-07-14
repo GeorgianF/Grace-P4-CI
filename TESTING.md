@@ -82,4 +82,9 @@ Low score on Best Practice due to the JQuery library mandatory for the DatePicke
 <img width="443" alt="Screenshot 2022-07-12 at 22 31 34" src="https://user-images.githubusercontent.com/91877102/178578506-b0f19282-31a6-41ea-846f-c833a51a3860.png">
 
 #### **Menu page**
+<img width="421" alt="Screenshot 2022-07-14 at 20 32 00" src="https://user-images.githubusercontent.com/91877102/179046505-1d7cd7ba-f27c-4e6f-8a3d-dabc849c4884.png">
+
+#### **Gallery page**
+<img width="415" alt="Screenshot 2022-07-14 at 20 41 02" src="https://user-images.githubusercontent.com/91877102/179047985-55b9f701-aa2e-4673-b636-740bf3167f30.png">
+
 
