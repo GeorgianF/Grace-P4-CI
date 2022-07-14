@@ -85,6 +85,29 @@ Low score on Best Practice due to the JQuery library mandatory for the DatePicke
 <img width="421" alt="Screenshot 2022-07-14 at 20 32 00" src="https://user-images.githubusercontent.com/91877102/179046505-1d7cd7ba-f27c-4e6f-8a3d-dabc849c4884.png">
 
 #### **Gallery page**
-<img width="415" alt="Screenshot 2022-07-14 at 20 41 02" src="https://user-images.githubusercontent.com/91877102/179047985-55b9f701-aa2e-4673-b636-740bf3167f30.png">
+<img width="407" alt="Screenshot 2022-07-14 at 21 14 22" src="https://user-images.githubusercontent.com/91877102/179053568-a58bc075-e61e-494d-8a87-8fdfe41fb27d.png">
+
+#### **Team page**
+<img width="419" alt="Screenshot 2022-07-14 at 21 38 47" src="https://user-images.githubusercontent.com/91877102/179058222-ea86da0e-314d-423d-8d38-ff70feef27c3.png">
+
+#### **FAQ page**
+<img width="408" alt="Screenshot 2022-07-14 at 21 39 57" src="https://user-images.githubusercontent.com/91877102/179058413-906e32ef-6cd8-4e41-a8ac-bd32ebe0f0f7.png">
+
+#### **Events page**
+<img width="410" alt="Screenshot 2022-07-14 at 21 40 46" src="https://user-images.githubusercontent.com/91877102/179058632-8bf45c8c-219b-45d1-88b0-a7a9c28d7118.png">
+
+
+#### **Login page**
+<img width="425" alt="Screenshot 2022-07-14 at 21 42 58" src="https://user-images.githubusercontent.com/91877102/179059002-45eef9ac-1722-4e40-a1e1-00e9f9024340.png">
+
+#### **View Reservations page**
+<img width="412" alt="Screenshot 2022-07-14 at 21 47 00" src="https://user-images.githubusercontent.com/91877102/179059807-c5c92c64-af86-45b0-8e2e-268171e546cd.png">
+
+#### **Edit Reservations page**
+<img width="412" alt="Screenshot 2022-07-14 at 21 48 01" src="https://user-images.githubusercontent.com/91877102/179060074-1114f8c5-37ed-494a-8ce7-fa3a169fd462.png">
+
+
+
+
 
 
