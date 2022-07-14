@@ -5,6 +5,25 @@
 <section id="view-reservations-header">
     <h1>View Reservations</h1>
 </section>
+
+<section id="greetings">
+    <h2 id="current-user">HEY THERE <span id="user-name-span">{{ user }}</span></h2>
+    <p>Here you can manage your books</p>
+</section>
+
+<section>
+    <div class="container" id="filter-buttons">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-2 mt-2 d-flex">
+                <button id="table-filter-user" role="button" class="btn btn-dark">ALL Reservations</button>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2 mt-2 d-flex">
+                <button id="table-filter-user" role="button" class="btn btn-dark">MY Reservations</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="container mb-5" >
     <div class="row reservation-table-row">
         <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 col-12" id="reservation-table">
@@ -17,7 +36,7 @@
                     </tr>
                 </thead>
                 {% for booking in bookings %}
-                <tr>
+                <tr class="booking-row">
                     {% if request.user.is_superuser or request.user.is_staff %}
                     <td>{{ booking.user }}</td>
                     {% else %}

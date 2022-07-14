@@ -73,3 +73,6 @@ $(document).ready(function() {
      "min" : 1
   });
 });
+
+
+// Filter data on the view reservation page
