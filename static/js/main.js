@@ -76,3 +76,33 @@ $(document).ready(function() {
 
 
 // Filter data on the view reservation page
+
+const userID = document.querySelector('#user-name-span').innerText;
+const myReservation = document.querySelector('#view-my-reservations-button');
+const r = document.querySelectorAll('.booking-row');
+
+console.log(r)
+console.log(userID)
+
+function filterUser() {
+  r.forEach(row => {
+    row.classList.add('d-none');
+    if (row.innerText.includes(userID)) {
+      row.classList.remove('d-none')
+    }
+  })
+}
+
+$(myReservation).on("click", filterUser);
+
+// Unfilter data on the the view reservation page
+
+const allReservation = document.querySelector('#view-all-reservations-button')
+
+function unfilterUser() {
+  r.forEach(row => {
+    row.classList.remove('d-none');
+  })
+}
+
+$(allReservation).on("click", unfilterUser);
