@@ -120,6 +120,22 @@ def booking_view(request):
                 return redirect('booking')
             else:
                 form.instance.user = user
+                sender = settings.EMAIL_HOST_USER
+                subject = 'Reservation has been received'
+                message = (
+                    f"Hey there {user}" +
+                    "\n\n" +
+                    f"Your reservation for {requested_date} is confirmed" +
+                    "\n\nSee you soon!\n\n" +
+                    "Grace Team"
+                    )
+                send_mail(
+                    subject,
+                    message,
+                    sender,
+                    [user.email],
+                    fail_silently=False
+                    )
                 form.save()
                 messages.success(
                     request,
