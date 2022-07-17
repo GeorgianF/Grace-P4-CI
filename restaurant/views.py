@@ -121,7 +121,7 @@ def booking_view(request):
             else:
                 form.instance.user = user
                 sender = settings.EMAIL_HOST_USER
-                subject = 'Reservation has been received'
+                subject = 'Reservation confirmation'
                 message = (
                     f"Hey there {user}" +
                     "\n\n" +
