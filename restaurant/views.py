@@ -62,21 +62,21 @@ def events_view(request):
         form_events = EventBooking(request.POST)
         # check whether it's valid:
         if form_events.is_valid():
-            # recipient = form_events.cleaned_data.get('user_email')
-            # subject = 'Hello'
-            # message = 'Sending Email through Gmail'
-            # sender = settings.EMAIL_HOST_USER
+            recipient = form_events.cleaned_data.get('user_email')
+            subject = 'Hello'
+            message = 'Sending Email through Gmail'
+            sender = settings.EMAIL_HOST_USER
             # print(recipient)
             # print(subject)
             # print(message)
             # print(sender)
-            # send_mail(
-            #     subject,
-            #     message,
-            #     settings.EMAIL_HOST_USER,
-            #     [recipient],
-            #     fail_silently=False
-            #     )
+            send_mail(
+                subject,
+                message,
+                settings.EMAIL_HOST_USER,
+                [recipient],
+                fail_silently=False
+                )
             messages.success(
                 request,
                 'Your request has been sent succesfully.' +
