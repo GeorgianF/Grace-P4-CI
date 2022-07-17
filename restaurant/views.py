@@ -63,17 +63,18 @@ def events_view(request):
         # check whether it's valid:
         if form_events.is_valid():
             recipient = form_events.cleaned_data.get('user_email')
-            subject = 'Hello'
-            message = 'Sending Email through Gmail'
+            subject = 'Event Request has been received'
+            message = (
+                f"Hey there {recipient} \n\n" +
+                "Your request has been sent succesfully." +
+                "\n\nWe will contact you shortly!\n\n" +
+                "Grace Team"
+                )
             sender = settings.EMAIL_HOST_USER
-            # print(recipient)
-            # print(subject)
-            # print(message)
-            # print(sender)
             send_mail(
                 subject,
                 message,
-                settings.EMAIL_HOST_USER,
+                sender,
                 [recipient],
                 fail_silently=False
                 )
