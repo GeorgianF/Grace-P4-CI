@@ -63,10 +63,12 @@ def events_view(request):
         # check whether it's valid:
         if form_events.is_valid():
             recipient = form_events.cleaned_data.get('user_email')
+            date = form_events.cleaned_data.get('event_date')
             subject = 'Event Request has been received'
             message = (
-                f"Hey there {recipient} \n\n" +
-                "Your request has been sent succesfully." +
+                f"Hey there {recipient}" +
+                "\n\n" +
+                f"Your request for {date} has been sent succesfully." +
                 "\n\nWe will contact you shortly!\n\n" +
                 "Grace Team"
                 )
