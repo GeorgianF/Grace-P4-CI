@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import ListView
 from django.contrib import messages
-# from django.conf import settings
-# from django.core.mail import send_mail
+from django.conf import settings
+from django.core.mail import send_mail
 from .models import Course, Booking
 from .forms import EventBooking, ReservationForm
 
@@ -62,13 +62,20 @@ def events_view(request):
         form_events = EventBooking(request.POST)
         # check whether it's valid:
         if form_events.is_valid():
-            # receiver = request.POST.get('user_email')
+            # recipient = form_events.cleaned_data.get('user_email')
+            # subject = 'Hello'
+            # message = 'Sending Email through Gmail'
+            # sender = settings.EMAIL_HOST_USER
+            # print(recipient)
+            # print(subject)
+            # print(message)
+            # print(sender)
             # send_mail(
-            #     'Hello',
-            #     'Here is the message.',
+            #     subject,
+            #     message,
             #     settings.EMAIL_HOST_USER,
-            #     [receiver],
-            #     fail_silently=False,
+            #     [recipient],
+            #     fail_silently=False
             #     )
             messages.success(
                 request,
