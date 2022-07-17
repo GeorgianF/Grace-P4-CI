@@ -2,6 +2,8 @@
 The restaurant is a fine dining restaurant located in the heart of Chicago. 
 The restaurant overlooks Cloud Gate, one of the most beautiful landmarks in Chicago. 
 Located here since 1998, it underwent a full-scale renovation and redesign in the summer of 2017.
+It presents to the user the products available and sets an expectation of the dishes that will be served.
+It allows the user to make/edit/delete a reservation and also send a form with details of an event, that will be sent to the restaurant admin and it can be afterwards transformed into a reservation.
 
 [Deployed site](https://grace-restaurant-p4-ci.herokuapp.com/)
 
@@ -216,6 +218,11 @@ Once all the fields are complete with the details, the user is requested to conf
 
 <img width="397" alt="Screenshot 2022-07-10 at 11 28 19" src="https://user-images.githubusercontent.com/91877102/178137340-76bdc590-9b93-4f69-823b-bdddfced78f4.png">
 
+Once the event form is confirmed, the user will be notified with a message on the page and the form will reset to the initial blank stage.
+
+<img width="464" alt="Screenshot 2022-07-17 at 11 39 25" src="https://user-images.githubusercontent.com/91877102/179390816-3b66ef26-5150-49d4-b3be-26a195f1a427.png">
+
+
 ### **Login page**
 
 On this page the user can authentificate of sign-up with a new account
@@ -262,26 +269,35 @@ All fields are mandatory, and the PERSONS box has a restriction of number betwee
 If the group is bigger than six, the user will need to use the event form.
 At the bottom of the form the user has the option to submit, reset or be redirect to the booking page
 
+Once the reservation is submited, the user will be notified with a success message
+
+<img width="402" alt="Screenshot 2022-07-17 at 11 43 48" src="https://user-images.githubusercontent.com/91877102/179390873-3d0737ae-da4b-4d93-baae-2d75d6b32960.png">
+
+The user is allowed only one reservation for the per interval, if he tries to select the same interval and same date he will be notified with an alert error message
+
+<img width="346" alt="Screenshot 2022-07-17 at 11 48 36" src="https://user-images.githubusercontent.com/91877102/179391080-4b312dc1-e29e-4b85-a741-234fcddc2d9a.png">
+
 
 ### **View booking page**
 
 Here the user can view all the reservations that have been made, and are still active.
+
+The view of the admin:
+
+<img width="812" alt="Screenshot 2022-07-17 at 11 50 22" src="https://user-images.githubusercontent.com/91877102/179391134-4f49c04c-4db4-44c9-90a1-14571abe6dd6.png">
+
 The user can view only the reservation that belongs to his name, the rest will be viewed as Anonymus.
 
-<img width="579" alt="Screenshot 2022-07-10 at 11 47 52" src="https://user-images.githubusercontent.com/91877102/178138005-f507e89e-9930-4279-892a-1c40b573cd8e.png">
+<img width="760" alt="Screenshot 2022-07-17 at 11 51 59" src="https://user-images.githubusercontent.com/91877102/179391165-bb965d64-435e-45b3-a0f2-e3b9761020cc.png">
 
 The reservation done under the name of the username will have 2 button available: Update and Delete
 If the reservation is not under his name, he will, not have the option to modify or delete it.
-
-The admin, can view all the reservations
-
-<img width="576" alt="Screenshot 2022-07-10 at 11 50 57" src="https://user-images.githubusercontent.com/91877102/178138033-362ca3a9-7350-4f39-98e6-a12f17682ab8.png">
-
-If the user clicks on the Update reservation, he will be redirected to the update reserrvation page
+If the user clicks on the Update reservation, he will be redirected to the update reserrvation page and the same steps to create the reservation are applied.
 If the user clicks on the Delete reservation, he will need to confirm the deletion
 
 <img width="398" alt="Screenshot 2022-07-10 at 12 01 23" src="https://user-images.githubusercontent.com/91877102/178138335-d925a3df-2056-4fa2-a7db-110b32059c5b.png">
 
+There are 2 buttons available on the page, that will allow the user to easy filter the reservation, only for his user, or to view all reservations that were created.
 
 ### **Update reservation page**
 
@@ -352,7 +368,7 @@ I have included details of my initial deployment in a separate document called [
   * Animation for navication: https://www.youtube.com/watch?v=dIyVTjJAkLw
   * Responsive Grid Image Gallery: https://www.youtube.com/watch?v=gvPyJ0rc944&list=WL&index=6
 * Datepicker, was added from this page: // https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html
-* Set timeout for the Dkango messages alert: // https://github.com/studygyaan/Django-CRM-Project
+* Set timeout for the Django messages alert: // https://github.com/studygyaan/Django-CRM-Project
 
 * General references:
     * [Geeks for Geeks](https://www.geeksforgeeks.org/)
