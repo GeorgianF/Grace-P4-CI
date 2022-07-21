@@ -22,7 +22,34 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="btn btn-dark" type="submit">{% trans "SIGN UP" %}</button>
+        <!-- <button class="btn btn-dark" type="submit">{% trans "SIGN UP" %}</button> -->
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#userModal">
+          {% trans "SIGN UP" %}
+        </button>
+
+
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="userModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                By providing the email address you can make sure that you will notified by email on every change that
+                you do within the account.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Add email</button>
+                <button type="submit" class="btn btn-dark">Create User</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </form>
 
     </div>
