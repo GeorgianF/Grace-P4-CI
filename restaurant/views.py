@@ -189,7 +189,7 @@ def edit_booking(request, booking_id):
             message = (
                 "Hey there" +
                 "\n\n" +
-                "Your new reservation is confirmed \n" +
+                "Your new reservation is confirmed \n\n" +
                 "See the details below: \n" +
                 f'Booking name: {new_reservation_name}' +
                 '\n' +
@@ -232,6 +232,22 @@ def delete_booking(request, booking_id):
     DELETE BOOKING
     """
     booking = get_object_or_404(Booking, id=booking_id)
+    sender = settings.EMAIL_HOST_USER
+    subject = 'Reservation has been canceled'
+    message = (
+        "Hey there" +
+        "\n\n" +
+        "As per request, your new reservation is canceled \n\n" +
+        "See you next time!\n\n" +
+        "Grace Team"
+        )
+    send_mail(
+        subject,
+        message,
+        sender,
+        [booking.user.email],
+        fail_silently=False
+    )
     booking.delete()
     messages.success(
             request,
