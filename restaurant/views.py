@@ -169,13 +169,49 @@ def edit_booking(request, booking_id):
     EDIT RESERVATIONS
     """
     booking = get_object_or_404(Booking, id=booking_id)
+    user = get_object_or_404(User, username=request.user)
     if request.method == "POST":
         form = ReservationForm(request.POST, instance=booking)
         if form.is_valid():
+            new_requested_date = form.cleaned_data['date']
+            new_reservation_name = form.cleaned_data['booking_name']
+            new_requested_time = form.cleaned_data['arrival_time']
+            new_no_of_persons = form.cleaned_data['number_of_persons']
+            new_details = form.cleaned_data['booking_details']
+            new_allergies = form.cleaned_data['allergies']
             form.save()
             messages.success(
                 request,
                 'Your request has been sent succesfully updated'
+                )
+            sender = settings.EMAIL_HOST_USER
+            subject = 'Reservation confirmation'
+            message = (
+                "Hey there" +
+                "\n\n" +
+                "Your new reservation is confirmed \n" +
+                "See the details below: \n" +
+                f'Booking name: {new_reservation_name}' +
+                '\n' +
+                f'Reservation date: {new_requested_date}' +
+                '\n' +
+                f'Arrival time: {new_requested_time}' +
+                '\n' +
+                f'Number or persons: {new_no_of_persons}' +
+                '\n' +
+                f'Booking details: {new_details}' +
+                '\n' +
+                f'Allergies: {new_allergies}' +
+                '\n' +
+                "\n\nSee you soon!\n\n" +
+                "Grace Team"
+                    )
+            send_mail(
+                subject,
+                message,
+                sender,
+                [user.email],
+                fail_silently=False
                 )
             return redirect('update-booking')
         else:
