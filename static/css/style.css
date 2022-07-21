@@ -1076,7 +1076,14 @@ td {
 
     #sign-out-container {
         margin-top: 0;
-    }    
+    }   
+    .team-heading {
+        font-size: 25px;
+    }
+
+    #events-form {
+        max-width: 90%;
+    }
 }
 
 /* ----- KeyFrames for grid  gallery ----- */
