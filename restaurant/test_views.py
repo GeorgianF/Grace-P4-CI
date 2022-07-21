@@ -1,5 +1,5 @@
-from django.test import TestCase, Client
-from .models import Booking
+from django.test import TestCase
+from .models import EventForm
 
 
 # Create your tests here.
@@ -54,16 +54,14 @@ class TestViews(TestCase):
             'password': 'somepassword'
             })
         self.assertEqual = (user_login.status_code, 200)
-        
-        # booking = Booking.objects.create(
-        #     user=Client(),
-        #     booking_name="Test",
-        #     date="2022-08-22",
-        #     booking_details="some details",
-        #     arrival_time="17:00",
-        #     number_of_persons="2",
-        #     allergies="No Allergies"
-        # )
-        # booking_response=self.client.get(f'/delete_booking/{booking_id}')
-        
-        
+
+    # def test_event_form_with_valid_data(self):
+    #     form = EventForm(data = {
+    #         'user_email': 'dummy@somemail.com',
+    #         'first_name': 'john',
+    #         'last_name': 'doe',
+    #         'phone_no': +310687773333,
+    #         'event_date': '2022-09-30',
+    #         'event_details': 'no details',
+    #     })
+    #     self.assertTrue(form.is_valid())
