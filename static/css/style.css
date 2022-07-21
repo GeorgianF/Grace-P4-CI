@@ -966,8 +966,9 @@ td {
         padding: 0;
     }
 
-    .landing-page img {
-        width: 300px;
+    #hero-image-index {
+        height: 250px;
+        width: 250px;
     }
 
     #quote {
@@ -1028,6 +1029,11 @@ td {
 }
 
 @media only screen and (max-width: 320px) {
+    #hero-image-index {
+        height: 200px;
+        width: 200px;
+    }
+
     #quote {
         font-size: 18px;
     }
