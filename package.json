@@ -5,5 +5,22 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "wow.js": "^1.2.2"
-  }
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "name": "grace-p4-ci",
+  "description": "The restaurant is a fine dining restaurant located in the heart of Chicago.  The restaurant overlooks Cloud Gate, one of the most beautiful landmarks in Chicago.  Located here since 1998, it underwent a full-scale renovation and redesign in the summer of 2017. It presents to the user the products available and sets an expectation of the dishes that will be served. It allows the user to make/edit/delete a reservation and also send a form with details of an event, that will be sent to the restaurant admin and it can be afterwards transformed into a reservation.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgianF/Grace-P4-CI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgianF/Grace-P4-CI/issues"
+  },
+  "homepage": "https://github.com/GeorgianF/Grace-P4-CI#readme"
 }

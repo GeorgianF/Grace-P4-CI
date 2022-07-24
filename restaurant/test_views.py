@@ -1,5 +1,4 @@
 from django.test import TestCase
-from .models import EventForm
 
 
 # Create your tests here.
@@ -54,14 +53,3 @@ class TestViews(TestCase):
             'password': 'somepassword'
             })
         self.assertEqual = (user_login.status_code, 200)
-
-    # def test_event_form_with_valid_data(self):
-    #     form = EventForm(data = {
-    #         'user_email': 'dummy@somemail.com',
-    #         'first_name': 'john',
-    #         'last_name': 'doe',
-    #         'phone_no': +310687773333,
-    #         'event_date': '2022-09-30',
-    #         'event_details': 'no details',
-    #     })
-    #     self.assertTrue(form.is_valid())
