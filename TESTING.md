@@ -106,6 +106,43 @@ Low score on Best Practice due to the JQuery library mandatory for the DatePicke
 #### **Edit Reservations page**
 <img width="412" alt="Screenshot 2022-07-14 at 21 48 01" src="https://user-images.githubusercontent.com/91877102/179060074-1114f8c5-37ed-494a-8ce7-fa3a169fd462.png">
 
+# Manual testing
+Below is a summary of how I manually tested each user story.
+
+
+* As a **User** I can ...
+  * | &check; |... **click on the nav bar** so that I can **easily navigate to the page of interest**
+  * | &check; |... **I can click on the wine list** so that I can **view and download it**
+  * | &check; |... **I can click on the cocktail list** so that I can **view and download it**
+  * | &check; |... **I can click on the social link** so that I can **visit the restaurant social pages**
+  * | &check; |... **I can view reviews/testimonials** so that **I can read them**
+
+* As a **User** I can't ...
+  * | &check; |... **submit and empty field in form** so that I can **validate the event**
+
+* As a **Unregistered User** I can ...
+  * | &check; |... **register an account** so that I can **login and view/update/delete my bookings**
+  * | &check; |... **send a form** so that I can **send information with events to the restaurant**
+
+* As a **Registered User** I can ...
+  * | &check; |... **view booking** so that I can **update them with new information**
+  * | &check; |... **view bookings** so that I can **cancel them**
+
+* As a **Admin** I can ...
+  * | &check; |... **view bookings** so that I can **manage them**
+  * | &check; |... **edit bookings** so that I can **manage them**
+  * | &check; |... **delete bookings** so that I can **manage them**
+  * | &check; |... **block registered users capability to double book** so that I can **block him from booking the same date twice**
+  * | &check; |... **send email on sending form** so that I can **confirm that the email has been received**
+  * | &check; |... **send email on accepting booking** so that I can **inform user that the reservation request has been approved**
+  * | &check; |... **send email on cancelation** so that I can **inform the user that the booking has been canceled**
+  * | &check; |... **filter and search all custom models from the admin page** so that I can **utilize the admin page to review, edit and delete data quickly**
+  * | &check; |... **add allergens to the dish when I create a course** so that I can **inform the customer about what it contains**
+  * | &check; |... **I can block the ability of the user to choose a date earlier than tomorrow** so that I can **send corect data to the restaurant**
+  * | &check; |... **I can add the option to confirm the action** so that I can **be sure that the user is aware of the form**
+
+* As a **developer** I can ...
+  * | &check; |... **make the website responsive on all devices** so that I can **give the user a better experience**
 
 
 
