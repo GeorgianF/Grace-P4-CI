@@ -93,9 +93,6 @@ def events_view(request):
     return render(request, "events.html", context)
 
 
-NUMBER_MAX_OF_BOOKINGS = 1
-
-
 @login_required()
 def booking_view(request):
     """
@@ -111,7 +108,7 @@ def booking_view(request):
                 date=requested_date,
                 arrival_time=requested_time
                 ).count()
-            if check_for_same_booking >= NUMBER_MAX_OF_BOOKINGS:
+            if check_for_same_booking >= settings.NUMBER_MAX_OF_BOOKINGS:
                 messages.error(
                         request,
                         f'Sorry! {user} ' +
