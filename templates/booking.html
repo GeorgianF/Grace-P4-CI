@@ -15,18 +15,12 @@
             {% csrf_token %}
             {{ form.as_p }}
             <div class="row form-buttons">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-10">
                     <input class="mt-2 mb-3 btn btn-dark" type="button" value="SUBMIT" data-bs-toggle="modal"
                         data-bs-target="#myBookingMessage">
                     <input class="mt-2 mb-3 btn btn-dark" type="reset" value="RESET">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4 text-uppercase" >
-                    <a href="{% url 'update-booking' %}" class="btn btn-dark" id="view-bookings-button"> <i class="fa fa-arrow-right f5"></i>T0 Bookings<i class="fa fa-arrow-right f5"></i> </a>
-                </div>
-            </div>
-
         {% endif%}
 
         
@@ -50,6 +44,11 @@
             </div>
         </form>
     </div>
+</section>
+<section id="view-bookings-button">
+        <div class="text-uppercase">
+            <a href="{% url 'update-booking' %}" class="btn btn-dark" > <i class="fa fa-arrow-right f5"></i>VIEW ALL BOOKINGS<i class="fa fa-arrow-right f5"></i> </a>
+        </div>
 </section>
 
 
