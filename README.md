@@ -277,6 +277,8 @@ The user is allowed only one reservation for the per interval, if he tries to se
 
 <img width="346" alt="Screenshot 2022-07-17 at 11 48 36" src="https://user-images.githubusercontent.com/91877102/179391080-4b312dc1-e29e-4b85-a741-234fcddc2d9a.png">
 
+One email will be sent if the user has the email address added to his profile, to confirm the reservation:
+<img width="455" alt="Screenshot 2022-07-25 at 21 11 42" src="https://user-images.githubusercontent.com/91877102/180845530-b9aa3c51-b32c-4d10-bf94-248654ed2a2b.png">
 
 ### **View booking page**
 
@@ -306,11 +308,27 @@ Once done he will need to confirm the change
 
 <img width="398" alt="Screenshot 2022-07-10 at 11 58 21" src="https://user-images.githubusercontent.com/91877102/178138223-2ec23d9a-d36f-4dae-9f52-5905276cad77.png">
 
-He will be notified with a message, that the change has been succesfull noted in the system.
+He will be notified with a message, that the change has been succesfull noted in the system:
+
+<img width="487" alt="Screenshot 2022-07-25 at 21 12 55" src="https://user-images.githubusercontent.com/91877102/180845706-3b800cf9-4dbb-4935-a0e0-8694b21f434d.png">
+
+And on the website with a alert:
 
 <img width="398" alt="Screenshot 2022-07-10 at 11 59 13" src="https://user-images.githubusercontent.com/91877102/178138241-43e695b6-5d78-4099-be84-071faa62b7ac.png">
 
-He will be notified with a message, that the change has been succesfull noted in the system.
+### **Delete reservation**
+
+If the user chooses to delete the reservation, he can easily do it by clickin the delete button, where he will be asked to confirm.
+
+<img width="498" alt="Screenshot 2022-07-25 at 21 15 14" src="https://user-images.githubusercontent.com/91877102/180846065-e9744bbf-6065-4d2e-aa6b-dacc259fb8b8.png">
+
+A alert will appear:
+
+<img width="385" alt="Screenshot 2022-07-25 at 21 15 51" src="https://user-images.githubusercontent.com/91877102/180846142-3886c43a-9d55-43f0-aacd-7f9d8a2e2cff.png">
+
+An email notification will be sent, to confirm the cancelation:
+
+<img width="352" alt="Screenshot 2022-07-25 at 21 16 31" src="https://user-images.githubusercontent.com/91877102/180846306-8e73d754-31fb-427b-8cb4-f28bc9577126.png">
 
 
 ### **COOKBOOKS (COMING SOON) page**
