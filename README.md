@@ -73,7 +73,7 @@ When developing the website, I have put myself in the shoes of the visitor, and 
 
 ## **Backbone**
 
-### **Wireframes:
+### **Wireframes**:
 **Landing page:**
 ------------------
 <img width="873" alt="Screenshot 2022-07-06 at 22 06 07" src="https://user-images.githubusercontent.com/91877102/177634548-bd35ada6-50b3-4d8f-8c2e-bc2405f76906.png">
@@ -98,6 +98,9 @@ When developing the website, I have put myself in the shoes of the visitor, and 
 ------------------
 <img width="762" alt="Screenshot 2022-07-06 at 22 14 31" src="https://user-images.githubusercontent.com/91877102/177635186-76f67339-3b15-4fa6-97a5-d6b61acc0546.png">
 
+### **DATABASE SCHEMA**:
+
+<img width="598" alt="Screenshot 2022-07-25 at 21 57 48" src="https://user-images.githubusercontent.com/91877102/180854726-c32f00f3-8dc3-4ae8-affd-daec752473e2.png">
 
 ### Color scheme:
 
