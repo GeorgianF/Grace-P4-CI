@@ -5,7 +5,9 @@ Located here since 1998, it underwent a full-scale renovation and redesign in th
 It presents to the user the products available and sets an expectation of the dishes that will be served.
 It allows the user to make/edit/delete a reservation and also send a form with details of an event, that will be sent to the restaurant admin and it can be afterwards transformed into a reservation.
 
-[Deployed site](https://grace-restaurant-p4-ci.herokuapp.com/)
+<img width="1242" alt="Screenshot 2022-07-25 at 22 37 01" src="https://user-images.githubusercontent.com/91877102/180860402-1aa59e3b-27b9-46e9-9b86-9bbb17ea8e0c.png">
+
+[Deployed site can be found here:](https://grace-restaurant-p4-ci.herokuapp.com/)
 
 # **Planning Phase**
 ## **Site Objectives:**
