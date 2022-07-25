@@ -540,7 +540,7 @@ img.img-thumbnail {
 }
 
 #events-form {
-    max-width: 30vw;
+    max-width: 40vw;
     margin: 0 auto;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -555,6 +555,11 @@ img.img-thumbnail {
     -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
     box-shadow: rgba(0,0,0,0.8) 0 0 10px;
     margin-bottom: 50px;
+}
+
+.fields-info {
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 #events-form textarea {

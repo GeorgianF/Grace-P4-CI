@@ -13,6 +13,8 @@
             <br>
             {%csrf_token%}
             {{ form_events.as_p }}
+            <p class="text-muted fields-info">*Phone number must be in international format</p>
+            <p class="text-muted fields-info">*All fields are required</p>
             <input class="mt-2 mb-3 btn btn-dark" type="button" value="SUBMIT" data-bs-toggle="modal" data-bs-target="#myMessage">
             <input class="mt-2 mb-3 btn btn-dark" type="reset" value="RESET">
 
