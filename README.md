@@ -9,6 +9,50 @@ It allows the user to make/edit/delete a reservation and also send a form with d
 
 Deployed site can be found here: [Grace Restaurant](https://grace-restaurant-p4-ci.herokuapp.com/)
 
+# **Table Of Contents**
+* [**Planning Phase**](#planning-phase)
+  * [**Site Objectives**](#site-objectives)
+    * [**Feasibility study**](#feasibility-study)
+  * [**Structure**](#structure)
+    * [**User Stories**](#user-stories)
+  * [**Backbone**](#backbone)
+    * [**Wireframes**](#wireframes)
+    * [**Landing page**](#landing-page)
+    * [**Gallery page**](#gallery-page)
+    * [**Menu page:**](#menu-page)
+    * [**Meet the team page:**](#meet-the-team-page)
+    * [**Events page:**](#events-page)
+    * [**Landing page:**](#landing-page)
+    * [**Login page:**](#login-page)
+    * [**Database schema**](#database-schema)
+    * [**Color scheme**](#color-scheme)
+  * [**Agile Development Process**](#agile-development-process)
+* [**Features**](#features)
+  * [**Site Navigation**](#site-navigation)
+    * [**Navbar**](#navbar)
+    * [**Home page**](#home-page)
+    * [**Our Restaurant page**](#our-restaurant-page)
+    * [**Menu page**](#menu-page)
+    * [**Gallery page**](#gallery-page)
+    * [**Team page**](#team-page)
+    * [**FAQ page**](#faq-page)
+    * [**Events page**](#events-page)
+    * [**Login page**](#login-page)
+    * [**Sign-up page**](#sign-up-page)
+    * [**Reservation page**](#reservation-page)
+    * [**View booking page**](#view-booking-page)
+    * [**Update reservation page**](#update-reservation-page)
+    * [**Delete reservation**](#delete-reservation)
+    * [**Cookbooks (COMING SOON) page**](#cookbooks-coming-soon-page)
+    * [**GIFTS (COMING SOON) page**](#gifts-coming-soon-page)
+* [**Future enhancements**](#future-enhancements)
+  * [**Emails**](#emails)
+  * [**Webshop**](#webshop)
+* [**Testing Phase**](#testing-phase)
+* [**Deployment**](#deployment)
+* [**Technologies used**](#technologies-used)
+* [**Credits**](#credits)
+
 # **Planning Phase**
 ## **Site Objectives:**
 The restaurant wants to inform the visitors about a sustainable approach on food, with zero waste policy.
@@ -100,7 +144,7 @@ When developing the website, I have put myself in the shoes of the visitor, and 
 ------------------
 <img width="762" alt="Screenshot 2022-07-06 at 22 14 31" src="https://user-images.githubusercontent.com/91877102/177635186-76f67339-3b15-4fa6-97a5-d6b61acc0546.png">
 
-### **DATABASE SCHEMA**:
+### **Database Schema**:
 
 <img width="598" alt="Screenshot 2022-07-25 at 21 57 48" src="https://user-images.githubusercontent.com/91877102/180854726-c32f00f3-8dc3-4ae8-affd-daec752473e2.png">
 
@@ -382,7 +426,7 @@ I have included details of my initial deployment in a separate document called [
   * All icons throughout the page.
 
 
-# Credits
+# **Credits**
 * Balsamiq was used to create the wireframes.
 * The site was developed using Gitpod.
 * GitHub was used to store my repository, and it can be found here: https://github.com/GeorgianF/Grace-P4-CI
