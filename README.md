@@ -389,6 +389,12 @@ The page is disabled, and it's future enhancement that can be added to the websi
 The page is disabled, and it's future enhancement that can be added to the website
 
 # **Future enhancements**
+### **Booking form**
+Currently the booking form offers the user a basic functionality.
+But in the future, it can be added multiple function based on the options choosen.
+For example: If "No Allergies" is checked, to disable the rest the of the checkboxes
+For example: If "Dairy" is checked, a new input field can populate where the user can input how many users have a dairy allergie, and check for the condition of the total number or people
+
 ### **Emails**
 Apply styles to the email that is sent via Django, to make it more appealing
 
