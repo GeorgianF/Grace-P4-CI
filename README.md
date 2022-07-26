@@ -46,6 +46,7 @@ Deployed site can be found here: [Grace Restaurant](https://grace-restaurant-p4-
     * [**Cookbooks (COMING SOON) page**](#cookbooks-coming-soon-page)
     * [**GIFTS (COMING SOON) page**](#gifts-coming-soon-page)
 * [**Future enhancements**](#future-enhancements)
+  * [**Booking form**](#booking-form)
   * [**Emails**](#emails)
   * [**Webshop**](#webshop)
 * [**Testing Phase**](#testing-phase)
