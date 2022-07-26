@@ -344,6 +344,12 @@ The page is disabled, and it's future enhancement that can be added to the websi
 
 The page is disabled, and it's future enhancement that can be added to the website
 
+# **Future enhancements**
+### **Emails**
+Apply styles to the email that is sent via Django, to make it more appealing
+
+### **Webshop**
+Two separate pages where a user can buy cookbooks and gifts (as jams, knifes, aprons, etc.)
 
 # **Testing Phase**
 I have included testing details during and post-development in a separate document called [TESTING.md](TESTING.md).
