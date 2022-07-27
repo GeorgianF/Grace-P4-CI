@@ -11,7 +11,7 @@
     <div class="container">
         {% if user.is_authenticated %}
         <form action="/booking/" method="POST">
-            <br>
+            <p class="mandatory d-flex justify-content-end text-danger">All fields are mandatory</p>
             {% csrf_token %}
             {{ form.as_p }}
             <div class="row form-buttons">
