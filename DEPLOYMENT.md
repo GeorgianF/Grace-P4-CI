@@ -17,9 +17,9 @@ Below are the steps I took to deploy the site to Heroku and any console commands
     * ```pip freeze --local > requirements.txt```
 1. Create an empty folder for your project in your chosen location.
 1. Create a project in the above folder:
-    * django-admin startproject <PROJECT_NAME> (in the case of this project, the project name was "jobsagooden")
+    * django-admin startproject <PROJECT_NAME> (in the case of this project, the project name was "Grace")
 1. Create an app within the project:
-    * ```python manage.py startapp APP_NAME``` (in the case of this project, the app name was "job_search")
+    * ```python manage.py startapp APP_NAME``` (in the case of this project, the app name was "restaurant")
 1. Add a new app to the list of installed apps in setting.py
 1. Migrate changes: 
     * ```python manage.py migrate```
